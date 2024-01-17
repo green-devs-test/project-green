@@ -4,17 +4,17 @@ import Body from "../components/Body/Body"
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Home" },
-    { name: "description", content: "Home description!" },
+    { title: "Search" },
+    { name: "description", content: "Search description!" },
   ];
 };
 
-export default function Index() {
+export default function Search() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Home</h1>
-      <Sidebar />
-      <Body />
+      <h1>Search</h1>
+		<Sidebar />
+		<Body />
     </div>
   );
 }
