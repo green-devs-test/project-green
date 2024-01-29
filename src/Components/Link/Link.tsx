@@ -3,7 +3,7 @@ import { css } from 'aphrodite';
 
 const Link = () => {
   return (
-    <div className={css(styles.red)}> Link </div>
+    <button className={css(styles.btn_option)}>Link</button>
   );
 }
 

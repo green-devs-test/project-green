@@ -1,7 +1,9 @@
+import styles from './styles';
+import { css } from 'aphrodite';
 
 const TopBar = () => {
   return (
-    <div> TopBar </div>
+    <div className={css(styles.topBar)} > TopBar </div>
   );
 }
 
