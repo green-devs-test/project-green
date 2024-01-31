@@ -3,9 +3,15 @@ import { StyleSheet } from "aphrodite";
 const styles = StyleSheet.create({
 
     footer: {
-        backgroundColor: 'lightseagreen',
-        height: '10vh',
-    }
+        padding: 7,
+        textAlign: 'center',
+        fontSize: 12,
+        
+    },
+    footer_link: {
+        textDecoration: 'underline overline dotted #fff',
+        color: '#FFF',
+    },
 
 });
 

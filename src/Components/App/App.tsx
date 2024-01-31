@@ -18,11 +18,12 @@ const App = () => {
           <TopBar />
           <Body />
         </div>
-
+      
       </div>
-        <div className={css(styles.footer_container)}>
+      
+      <div className={css(styles.footer_container)}>
           <Footer />
-        </div>
+      </div>
     </div>
   );
 }

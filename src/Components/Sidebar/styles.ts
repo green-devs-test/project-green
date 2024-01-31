@@ -3,7 +3,7 @@ import { StyleSheet} from 'aphrodite';
 const styles = StyleSheet.create({
 
     sidebar: {
-        backgroundColor: 'lightgreen',
+        backgroundColor: '#c2eaba',
         height: '90vh',
         display: 'flex',
         flexDirection: 'column',
