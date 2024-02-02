@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+            backgroundColor: 'gray',
         },
 
         flex_container: {
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
             width: '90vw',
             display: "flex",
             justifyContent: "center",
-             alignItems: "center",
+            alignItems: "center",
         },
 });
 

@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
         height: '10vh',
         padding: '7px',
         boxSizing: 'border-box',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
     }
 
 });
