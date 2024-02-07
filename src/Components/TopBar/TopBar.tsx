@@ -3,7 +3,10 @@ import { css } from 'aphrodite';
 
 const TopBar = () => {
   return (
-    <div className={css(styles.topBar)} > TopBar </div>
+    <div className={css(styles.topBar)} > 
+    <div>Menu</div>
+    <div>LOGO</div>
+    </div>
   );
 }
 

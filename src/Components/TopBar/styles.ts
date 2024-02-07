@@ -8,9 +8,11 @@ const styles = StyleSheet.create({
         padding: '7px',
         boxSizing: 'border-box',
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
         alignItems: 'center',
-    }
+        boxShadow: '0px 10px 10px -8px gray',
+        marginBottom: 20,
+    },
 
 });
 

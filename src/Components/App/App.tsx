@@ -8,22 +8,18 @@ import styles from './styles';
 const App = () => {
   return (
     <div className={css(styles.container)}>
+
       <div className={css(styles.flex_container)}>
-        
-        <div className={css(styles.nav_container)}>
-          <Sidebar />
-        </div>
-        
         <div className={css(styles.main_container)}>
           <TopBar />
           <Body />
-        </div>
-      
-      </div>
-      
-      <div className={css(styles.footer_container)}>
+          <div className={css(styles.footer_container)}>
           <Footer />
+          </div>
+        </div>
       </div>
+    
+      
     </div>
   );
 }

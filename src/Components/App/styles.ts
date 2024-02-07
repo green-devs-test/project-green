@@ -10,32 +10,25 @@ const styles = StyleSheet.create({
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: 'gray',
         },
 
         flex_container: {
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: 'column',
             width: '90vw',
             height: '90vh',
         },
 
         nav_container: {
-            width: '15vw', 
-
-            '@media (max-width: 764px)' : {
-                    width: '25vw',
-                } 
+           
         },
 
         main_container: {
-            width: '80vw',
+            width: '90vw',
         },
 
         footer_container: {
             backgroundColor: '#a7c4a0',
-            height: '10vh',
-            width: '90vw',
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
