@@ -6,8 +6,10 @@ import { css } from "aphrodite";
 import styles from './styles';
 
 const App = () => {
-  return (
+    return (
+    
     <div className={css(styles.container)}>
+
 
       <div className={css(styles.flex_container)}>
         <div className={css(styles.main_container)}>
