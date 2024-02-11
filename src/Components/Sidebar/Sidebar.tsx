@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo';
 
 const Sidebar = () => {
   return (
-    <div className={css(styles.sidebar)}> Sidebar 
+    <div id='item_sidebar' className={css(styles.sidebar)}> Sidebar 
     <Logo />
         <Link />
         <Link />

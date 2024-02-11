@@ -15,6 +15,7 @@ const App = () => {
         <div className={css(styles.main_container)}>
           <TopBar />
           <Body />
+          <Sidebar />
           <div className={css(styles.footer_container)}>
           <Footer />
           </div>
