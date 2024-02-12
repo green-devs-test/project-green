@@ -4,17 +4,32 @@ import TopBar from "../TopBar/TopBar";
 import Footer from "../Footer/Footer";
 import { css } from "aphrodite";
 import styles from './styles';
+import { useState } from "react";
+
+enum SidebarType {
+  DEFAULT= "default",
+  OPEN= "open",
+  CLOSED= "closed"
+}
 
 const App = () => {
+  const [openSidebar, setOpenSidebar] = useState<SidebarType>(SidebarType.DEFAULT);
+
+  const toggleSidebar = () => {}; // add here the logic
+  
+  
   return (
     <div className={css(styles.container)}>
 
       <div className={css(styles.flex_container)}>
         <div className={css(styles.main_container)}>
-          <TopBar />
-          <Body />
+          <TopBar toggleSidebar={toggleSidebar} />
+          <div className={css(styles.main_body_container)}>
+            {openSidebar !== SidebarType.CLOSED && <div className={css(openSidebar === SidebarType.DEFAULT && styles.sidebar_default)} ><Sidebar /></div>}
+            <Body />
+          </div>
           <div className={css(styles.footer_container)}>
-          <Footer />
+            <Footer />
           </div>
         </div>
       </div>
