@@ -18,21 +18,29 @@ const styles = StyleSheet.create({
             width: '90vw',
             height: '90vh',
         },
-
+        
         nav_container: {
-           
+            
         },
-
+        
         main_container: {
             width: '90vw',
         },
-
+        
+        main_body_container:{
+            display: 'flex',
+        },
         footer_container: {
             backgroundColor: '#a7c4a0',
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
         },
+        sidebar_default:{
+            '@media (max-width: 1024px)': {
+                display: 'none'
+            }
+        }
 });
 
 export default styles;
