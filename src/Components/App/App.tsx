@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import { css } from "aphrodite";
 import styles from './styles';
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 enum SidebarType {
   DEFAULT= "default",
@@ -44,7 +45,7 @@ const App = () => {
             {
             openSidebar !== SidebarType.CLOSED ? <div className={css(openSidebar === SidebarType.DEFAULT && styles.sidebar_default)} ><Sidebar /></div> : null
             }
-            <Body />
+            <Outlet />
           </div>
           
           <div className={css(styles.footer_container)}>
