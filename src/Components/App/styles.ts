@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
             '@media (max-width: 1024px)': {
                 display: 'none'
             }
-        }
+        },
 });
 
 export default styles;
