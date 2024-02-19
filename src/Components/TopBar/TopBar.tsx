@@ -1,7 +1,6 @@
 import styles from './styles';
 import { css } from 'aphrodite';
-
-const sidebar = document.querySelector('#item_sidebar');
+import Icon from '../Icon/Icon';
 
 interface TopBarProps{
   toggleSidebar(): void
@@ -13,7 +12,7 @@ const TopBar = (props: TopBarProps) => {
 
   return (
     <div className={css(styles.topBar)} > 
-      <div onClick={() => props.toggleSidebar()}>Menu</div>
+      <div onClick={() => props.toggleSidebar()}><Icon /></div>
       <div>LOGO</div>
     </div>
   );

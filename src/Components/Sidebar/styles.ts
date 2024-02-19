@@ -3,7 +3,7 @@ import { StyleSheet} from 'aphrodite';
 const styles = StyleSheet.create({
 
     sidebar: {
-        visibility: 'hidden',
+        visibility: 'visible',
         backgroundColor: '#c2eaba',
         height: '90vh',
         display: 'flex',

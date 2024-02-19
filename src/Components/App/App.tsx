@@ -15,7 +15,9 @@ enum SidebarType {
 const App = () => {
   const [openSidebar, setOpenSidebar] = useState<SidebarType>(SidebarType.DEFAULT);
 
-  const toggleSidebar = () => {}; // add here the logic
+  const toggleSidebar = () => {
+    console.log('clickeado');
+  }; // add here the logic
   
   
   return (
