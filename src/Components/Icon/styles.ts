@@ -2,8 +2,8 @@ import { StyleSheet } from 'aphrodite';
 
 const styles = StyleSheet.create({
     iconito: {
-        fontSize: '15px',
-    }
+        fontSize: '30px',
+    },
 })
 
 export default styles;

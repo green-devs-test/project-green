@@ -17,6 +17,18 @@ const App = () => {
 
   const toggleSidebar = () => {
     console.log('clickeado');
+
+    if (openSidebar !== SidebarType.OPEN ) {
+      setOpenSidebar(SidebarType.OPEN);
+    } else if (openSidebar === SidebarType.OPEN) {
+      setOpenSidebar(SidebarType.CLOSED);
+    };
+
+    /* 
+    Si está abierto: cerrado
+    
+    Si está cerrado: abrirlo
+    */
   }; // add here the logic
   
   
@@ -27,13 +39,18 @@ const App = () => {
       <div className={css(styles.flex_container)}>
         <div className={css(styles.main_container)}>
           <TopBar toggleSidebar={toggleSidebar} />
+          
           <div className={css(styles.main_body_container)}>
-            {openSidebar !== SidebarType.CLOSED && <div className={css(openSidebar === SidebarType.DEFAULT && styles.sidebar_default)} ><Sidebar /></div>}
+            {
+            openSidebar !== SidebarType.CLOSED ? <div className={css(openSidebar === SidebarType.DEFAULT && styles.sidebar_default)} ><Sidebar /></div> : null
+            }
             <Body />
           </div>
+          
           <div className={css(styles.footer_container)}>
             <Footer />
           </div>
+        
         </div>
       </div>
     

@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 
 export const Icon = () => {
     return (
-        <FaBars />
+        <FaBars className={css(styles.iconito)} />
     )
 };
 

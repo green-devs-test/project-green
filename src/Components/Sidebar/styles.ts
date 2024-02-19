@@ -3,13 +3,15 @@ import { StyleSheet} from 'aphrodite';
 const styles = StyleSheet.create({
 
     sidebar: {
-        visibility: 'hidden',
+        visibility: 'visible',
         backgroundColor: '#c2eaba',
-        height: '90vh',
+        height: '100%',
+        width: '20vw',
         display: 'flex',
         flexDirection: 'column',
         boxSizing: 'border-box',
         padding: 7,
+        zIndex: 5,
     },
 
 

@@ -14,6 +14,11 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
 
+    menu_icon_default: {
+        '@media (min-width: 1024px)': {
+            visibility: 'hidden',
+        }
+    },
 });
 
 export default styles;

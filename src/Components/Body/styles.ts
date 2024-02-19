@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         height: '80vh',
         padding: 7,
         boxSizing: 'border-box',
+        zIndex: 1,
     }
 });
 

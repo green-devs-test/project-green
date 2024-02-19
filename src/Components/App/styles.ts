@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
         },
         sidebar_default:{
             '@media (max-width: 1024px)': {
-                display: 'none'
+                display: 'none',
+                width: '30vw',
             }
         },
 });
