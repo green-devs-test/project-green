@@ -16,20 +16,12 @@ const App = () => {
   const [openSidebar, setOpenSidebar] = useState<SidebarType>(SidebarType.DEFAULT);
 
   const toggleSidebar = () => {
-    console.log('clickeado');
-
     if (openSidebar !== SidebarType.OPEN ) {
       setOpenSidebar(SidebarType.OPEN);
     } else if (openSidebar === SidebarType.OPEN) {
       setOpenSidebar(SidebarType.CLOSED);
     };
-
-    /* 
-    Si está abierto: cerrado
-    
-    Si está cerrado: abrirlo
-    */
-  }; // add here the logic
+  };
   
   
   return (
