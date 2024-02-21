@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         boxSizing: 'border-box',
         padding: 7,
-        zIndex: 5,
     },
 
 

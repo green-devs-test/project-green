@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         fontSize: 'large',
         fontWeight: 'bold',
-        margin: '5px',
+        margin: 5,
         verticalAlign: '50%',
     },
 
@@ -35,13 +35,9 @@ const styles = StyleSheet.create({
         borderRadius: '5px',
         textAlign: 'center',
     },
-
     options: {
-        
-        border: '2 px solid black',
+        border: '2px solid black',
     },    
-    
-
     btn_search: {
         backgroundColor: '#ffb300',
         fontSize: 'x-large',

@@ -8,7 +8,6 @@ interface TopBarProps{
 }
 
 const TopBar = (props: TopBarProps) => {
-  // TODO: show and hide menu button with css according to media query
 
   return (
     <div className={css(styles.topBar)} > 
