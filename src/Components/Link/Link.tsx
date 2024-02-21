@@ -1,9 +1,13 @@
 import styles from './styles'
 import { css } from 'aphrodite';
 
-const Link = () => {
+interface LinkProps {
+  text: string
+}
+
+const Link = (props: LinkProps) => {
   return (
-    <button className={css(styles.btn_option)}>Link</button>
+    <button className={css(styles.btn_option)}>{props.text}</button>
   );
 }
 
