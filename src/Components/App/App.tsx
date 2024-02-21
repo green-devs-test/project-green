@@ -19,7 +19,7 @@ const App = () => {
     if (openSidebar !== SidebarType.OPEN ) {
       setOpenSidebar(SidebarType.OPEN);
     } else if (openSidebar === SidebarType.OPEN) {
-      setOpenSidebar(SidebarType.CLOSED);
+      setOpenSidebar(SidebarType.CLOSED);  
     };
   };
   
