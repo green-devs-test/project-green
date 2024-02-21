@@ -1,10 +1,10 @@
-import styles from './styles'
-import { css } from 'aphrodite';
+import styles from "./styles";
+import { css } from "aphrodite";
 import { Link } from "react-router-dom";
 
 interface LinkButtonProps {
-  to: string,
-  text: string
+  to: string;
+  text: string;
 }
 
 const LinkButton = (props: LinkButtonProps) => {
@@ -13,6 +13,6 @@ const LinkButton = (props: LinkButtonProps) => {
       <button className={css(styles.btn_option)}>{props.text}</button>
     </Link>
   );
-}
+};
 
 export default LinkButton;
