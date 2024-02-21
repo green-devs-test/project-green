@@ -1,14 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './Components/App/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./Components/App/App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Body from "./Components/Body/Body";
+import About from "./Components/About";
+import ErrorPage from "./Components/ErrorPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
