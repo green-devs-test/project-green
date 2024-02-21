@@ -18,11 +18,6 @@ const styles = StyleSheet.create({
             width: '90vw',
             height: '90vh',
         },
-        
-        nav_container: {
-            
-        },
-        
         main_container: {
             width: '90vw',
         },
