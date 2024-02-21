@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
         '@media (max-width: 1024px)': {
             fontSize: '1.1rem'
         }
+
     },
 });
 

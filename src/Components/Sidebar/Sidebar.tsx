@@ -7,9 +7,9 @@ const Sidebar = () => {
   return (
     <div id='item_sidebar' className={css(styles.sidebar)}> Sidebar 
     <Logo />
-        <LinkButton to="/" text="Home"/>
-        <LinkButton to="/about" text="Quienes Somos"/>
-        <LinkButton to="/test" text="test"/>
+        <LinkButton to="/" text='Home' />
+        <LinkButton to="/about" text='About us' />
+        <LinkButton to="/test" text='Test'/>
     </div>
   );
 }
