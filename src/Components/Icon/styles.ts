@@ -1,9 +1,9 @@
-import { StyleSheet } from 'aphrodite';
+import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-    icon: {
-        fontSize: 30,
-    },
-})
+  icon: {
+    fontSize: 30,
+  },
+});
 
 export default styles;
