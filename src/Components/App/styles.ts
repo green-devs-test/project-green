@@ -10,12 +10,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   flex_container: {
     display: "flex",
     flexDirection: "column",
     width: "90vw",
-    height: "90vh",
   },
   main_container: {
     width: "90vw",

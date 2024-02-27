@@ -1,6 +1,7 @@
 import { css } from "aphrodite";
 import styles from "./styles";
 import Form from "../Form";
+import Card from "../Card";
 
 const Body = () => {
   return (
@@ -14,6 +15,7 @@ const Body = () => {
           seleccionado.
         </p>
         <Form />
+        <Card />
       </div>
     </>
   );

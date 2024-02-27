@@ -1,6 +1,7 @@
 import Sidebar from "../Sidebar/Sidebar";
 import TopBar from "../TopBar/TopBar";
 import Footer from "../Footer/Footer";
+import Card from "../Card";
 import { css } from "aphrodite";
 import styles from "./styles";
 import { useState } from "react";
@@ -43,7 +44,6 @@ const App = () => {
             ) : null}
             <Outlet />
           </div>
-
           <div className={css(styles.footer_container)}>
             <Footer />
           </div>
