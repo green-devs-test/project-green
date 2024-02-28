@@ -8,12 +8,12 @@ const Table = () => {
         <table>
             <thead>
                 <tr>
-                    <th className={css(styles.th_style)}>Nombre</th>
-                    <th className={css(styles.th_style)}>Direccion</th>
-                    <th className={css(styles.th_style)}>Barrio</th>
-                    <th className={css(styles.th_style)}>Ubicacion (GPS)</th>
-                    <th className={css(styles.th_style)}>Telefono</th>
-                    <th className={css(styles.th_style)}>Tipo Material</th>
+                    <th className={css(styles.thStyle)}>Nombre</th>
+                    <th className={css(styles.thStyle)}>Direccion</th>
+                    <th className={css(styles.thStyle)}>Barrio</th>
+                    <th className={css(styles.thStyle)}>Ubicacion (GPS)</th>
+                    <th className={css(styles.thStyle)}>Telefono</th>
+                    <th className={css(styles.thStyle)}>Tipo Material</th>
                 </tr>
             </thead>
 

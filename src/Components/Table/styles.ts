@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         margin: "10px",
       },
     
-      th_style: {
+      thStyle: {
         backgroundColor: "#c2eaba",
       },
 });

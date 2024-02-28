@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#c2eaba',
         padding: '10px',
     },
-    flex__etiquetas: {
+    materials: {
 	    justifyContent: 'center',
 	    textAlign: 'center',
         display: 'inline-block',

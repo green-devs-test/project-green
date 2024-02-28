@@ -2,7 +2,7 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
   body: {
-    height: "80vh",
+    height: "auto",
     padding: 7,
     boxSizing: "border-box",
     zIndex: 1,
