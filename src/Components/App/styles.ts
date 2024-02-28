@@ -10,17 +10,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   flex_container: {
     display: "flex",
     flexDirection: "column",
-    width: "90vw",
-    height: "90vh",
   },
   main_container: {
-    width: "90vw",
   },
-
   main_body_container: {
     display: "flex",
   },
@@ -33,7 +28,7 @@ const styles = StyleSheet.create({
   sidebar_default: {
     "@media (max-width: 1024px)": {
       display: "none",
-      width: "30vw",
+      width: "30%",
     },
   },
 });
