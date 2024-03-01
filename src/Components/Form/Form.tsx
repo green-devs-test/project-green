@@ -10,6 +10,9 @@ const Form = () => {
   const SelectProvince = (province : string) => {
     console.log(province);
   };
+  const SelectCity = (city : string) => {
+    console.log(city);
+  };
 
   const provinces = ['buenos aires', 'mendoza', 'Entre Rios'];
   const cities = ['capital', 'mendoza', 'paraná'];
@@ -20,7 +23,7 @@ const Form = () => {
             <div>
               <form className={css(styles.form)}>
                 <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} />
-                <LocalitySelector citiesNames={cities}/>
+                <LocalitySelector citiesNames={cities} selectCity={SelectCity}/>
                 <div>
                     <BtnSearch />  
                 </div>

@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
 	        transform: 'translateY(-3%)',
           },
       },
-    card__contenido : {
+    cardContent : {
 
     },
-    nombre: {
+    spotName: {
         backgroundColor: '#c2eaba',
         padding: '10px',
     },
-    materials: {
+    CardMaterials: {
 	    justifyContent: 'center',
 	    textAlign: 'center',
         display: 'inline-block',
@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
 	    boxShadow: '2px 2px black',
 	    margin: '10px 5px 10px 5px',
     },
-    detalles: {
+    cardAdress: {
         verticalAlign: 'text-bottom',
     },
-    btnLocation: {
+    cardBtnLocation: {
         backgroundColor: "#84b884",
         textDecoration: 'none',
         padding: '10px 10px',

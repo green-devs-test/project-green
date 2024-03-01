@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   h1: {
     textAlign: "center",
   },
-  main_instructions: {
+  mainInstructions: {
     textAlign: "center",
     fontSize: "18px",
   },

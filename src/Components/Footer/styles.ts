@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12,
   },
-  footer_link: {
+  footerLink: {
     textDecoration: "underline overline dotted #fff",
     color: "#FFF",
   },
