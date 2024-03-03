@@ -2,7 +2,6 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
     table: {
-        backgroundColor: "",
         display: "flex",
         justifyContent: "center",
         margin: "10px",

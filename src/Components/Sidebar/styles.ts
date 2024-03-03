@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     visibility: "visible",
     backgroundColor: "#c2eaba",
     height: "100%",
-    width: "20vw",
+    width: '250px',
     display: "flex",
     flexDirection: "column",
     boxSizing: "border-box",

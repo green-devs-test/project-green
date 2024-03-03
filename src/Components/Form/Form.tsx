@@ -1,9 +1,9 @@
 import { css } from "aphrodite";
 import styles from './styles';
-import Table from "../Table";
 import ProvinceSelector from "../ProvinceSelector";
 import LocalitySelector from "../LocalitySelector";
 import BtnSearch from "../BtnSearch";
+import Grid from "../Grid";
 
 const Form = () => {
 
@@ -20,6 +20,7 @@ const Form = () => {
     return (
         <article>
           <div>
+            
             <div>
               <form className={css(styles.form)}>
                 <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} />
@@ -29,8 +30,9 @@ const Form = () => {
                 </div>
               </form>
             </div>
-            <Table />
-            
+
+            <Grid />
+
           </div>
         </article>
     );

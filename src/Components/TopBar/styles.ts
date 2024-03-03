@@ -3,7 +3,7 @@ import { StyleSheet } from "aphrodite";
 const styles = StyleSheet.create({
   topBar: {
     backgroundColor: "#a7c4a0",
-    height: "10vh",
+    height: "50px",
     padding: "7px",
     boxSizing: "border-box",
     display: "flex",

@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
 
     card: {
         position: 'relative',
-        width: '400px',
-        minWidth: '300px',
+        width: '350px',
+        minWidth: '150px',
         margin: '20px',
         border: '1px solid black',
         borderRadius: '6px',
