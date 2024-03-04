@@ -1,6 +1,6 @@
 import { Province, Spot } from "./interfaces";
 
-const GeoLocationService = () => {
+const geoLocationService = () => {
   // maybe this could go on a context
 
   const getProvinces = (): Promise<Province[]> => {
@@ -90,4 +90,4 @@ const GeoLocationService = () => {
   };
 };
 
-export default GeoLocationService;
+export default geoLocationService;
