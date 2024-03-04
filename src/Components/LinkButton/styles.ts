@@ -1,7 +1,7 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  btnOption: {
+  btn_option: {
     fontSize: "1rem",
     backgroundColor: "#84b884",
     textAlign: "right",

@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
 
     card: {
         position: 'relative',
-        width: '350px',
-        minWidth: '150px',
+        width: '400px',
+        minWidth: '300px',
         margin: '20px',
         border: '1px solid black',
         borderRadius: '6px',
@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
 	        transform: 'translateY(-3%)',
           },
       },
-    cardContent : {
+    card__contenido : {
 
     },
-    spotName: {
+    nombre: {
         backgroundColor: '#c2eaba',
         padding: '10px',
     },
-    CardMaterials: {
+    materials: {
 	    justifyContent: 'center',
 	    textAlign: 'center',
         display: 'inline-block',
@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
 	    boxShadow: '2px 2px black',
 	    margin: '10px 5px 10px 5px',
     },
-    cardAdress: {
+    detalles: {
         verticalAlign: 'text-bottom',
     },
-    cardBtnLocation: {
+    btnLocation: {
         backgroundColor: "#84b884",
         textDecoration: 'none',
         padding: '10px 10px',

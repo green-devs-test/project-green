@@ -3,8 +3,7 @@ import { StyleSheet } from "aphrodite";
 const styles = StyleSheet.create({
   topBar: {
     backgroundColor: "#a7c4a0",
-    height: "50px",
-    width: '100%',
+    height: "10vh",
     padding: "7px",
     boxSizing: "border-box",
     display: "flex",
@@ -12,8 +11,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     boxShadow: "0px 10px 10px -8px gray",
     marginBottom: 20,
-    position: 'fixed',
-    zIndex: 5,
   },
 
   menuIconDefault: {
