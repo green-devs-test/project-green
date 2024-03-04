@@ -10,30 +10,26 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
-  flex_container: {
+  flexContainer: {
     display: "flex",
     flexDirection: "column",
-    width: "90vw",
-    height: "90vh",
   },
-  main_container: {
-    width: "90vw",
+  mainContainer: {
+    color: 'black',
   },
-
-  main_body_container: {
+  mainBodyContainer: {
     display: "flex",
   },
-  footer_container: {
+  footerContainer: {
     backgroundColor: "#a7c4a0",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
-  sidebar_default: {
+  sidebarDefault: {
     "@media (max-width: 1024px)": {
       display: "none",
-      width: "30vw",
+      width: "30%",
     },
   },
 });

@@ -11,7 +11,7 @@ const TopBar = (props: TopBarProps) => {
     <div className={css(styles.topBar)}>
       <div
         onClick={() => props.toggleSidebar()}
-        className={css(styles.menu_icon_default)}
+        className={css(styles.menuIconDefault)}
       >
         <Icon />
       </div>
