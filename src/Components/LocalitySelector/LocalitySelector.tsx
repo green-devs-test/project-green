@@ -3,6 +3,7 @@ import styles from './styles';
 
 interface LocalitySelectorProps {
     citiesNames: string[];
+    selectCity(city: string) : void;
   }
 const LocalitySelector = (props: LocalitySelectorProps ) => {
     return (
