@@ -4,19 +4,16 @@ const geoLocationService = () => {
   // maybe this could go on a context
 
   const getProvinces = (): Promise<Province[]> => {
-    return fetch(
-      process.env.REACT_APP_API_URL + "/provinces/",
-      {
-        method: "GET",
-        mode: "cors",
-        redirect: "follow",
-        cache: "no-store",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
-    )
+    return fetch(process.env.REACT_APP_API_URL + "/provinces/", {
+      method: "GET",
+      mode: "cors",
+      redirect: "follow",
+      cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -30,19 +27,16 @@ const geoLocationService = () => {
   };
 
   const getLocations = (province: string): Promise<string[]> => {
-    return fetch(
-        `${process.env.REACT_APP_API_URL}/provinces/${province}`,
-      {
-        method: "GET",
-        mode: "cors",
-        redirect: "follow",
-        cache: "no-store",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
-    )
+    return fetch(`${process.env.REACT_APP_API_URL}/provinces/${province}`, {
+      method: "GET",
+      mode: "cors",
+      redirect: "follow",
+      cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -67,7 +61,7 @@ const geoLocationService = () => {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         },
-      }
+      },
     )
       .then((response) => {
         if (!response.ok) {
@@ -81,12 +75,10 @@ const geoLocationService = () => {
       });
   };
 
-
-
   return {
     getProvinces,
     getLocations,
-    getSpots
+    getSpots,
   };
 };
 
