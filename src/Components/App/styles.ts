@@ -10,22 +10,22 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  flexContainer: {
+  flex_container: {
     display: "flex",
     flexDirection: "column",
   },
-  mainContainer: {
+  main_container: {
   },
-  mainBodyContainer: {
+  main_body_container: {
     display: "flex",
   },
-  footerContainer: {
+  footer_container: {
     backgroundColor: "#a7c4a0",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
-  sidebarDefault: {
+  sidebar_default: {
     "@media (max-width: 1024px)": {
       display: "none",
       width: "30%",
