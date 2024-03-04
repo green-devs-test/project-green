@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
           },
       },
     cardContent : {
-
+        color: 'back',
     },
     spotName: {
         backgroundColor: '#c2eaba',
