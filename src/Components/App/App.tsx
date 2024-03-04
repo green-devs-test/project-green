@@ -33,7 +33,15 @@ const App = () => {
           <TopBar toggleSidebar={toggleSidebar} />
 
           <div className={css(styles.mainBodyContainer)}>
-            {openSidebar !== SidebarType.CLOSED ? (<div className={css(openSidebar === SidebarType.DEFAULT && styles.sidebarDefault,)}><Sidebar /></div>): null}
+            {openSidebar !== SidebarType.CLOSED ? (
+              <div
+                className={css(
+                  openSidebar === SidebarType.DEFAULT && styles.sidebarDefault,
+                )}
+              >
+                <Sidebar />
+              </div>
+            ) : null}
             <Outlet />
           </div>
           <div className={css(styles.footerContainer)}>

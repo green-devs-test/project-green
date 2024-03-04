@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   mainContainer: {
-    color: 'black',
+    color: "black",
   },
   mainBodyContainer: {
     display: "flex",
