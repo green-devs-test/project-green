@@ -3,10 +3,10 @@ import styles from "./styles";
 
 const Footer = () => {
   return (
-    <div id="item_footer" className={css(styles.footer)}>
+    <div id="itemFooter" className={css(styles.footer)}>
       ProjectGreen - Copywright© 2024 - Powered by
       <a
-        className={css(styles.footer_link)}
+        className={css(styles.footerLink)}
         href="https://github.com/green-devs-test"
       >
         {" "}

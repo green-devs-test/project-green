@@ -10,7 +10,7 @@ interface LinkButtonProps {
 const LinkButton = (props: LinkButtonProps) => {
   return (
     <Link to={props.to}>
-      <button className={css(styles.btn_option)}>{props.text}</button>
+      <button className={css(styles.btnOption)}>{props.text}</button>
     </Link>
   );
 };

@@ -1,7 +1,7 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-    btn_search: {
+    btnSearch: {
         backgroundColor: "#84b884",
         fontSize: "x-large",
         padding: "0.5rem",
