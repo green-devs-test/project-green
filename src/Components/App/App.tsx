@@ -28,23 +28,15 @@ const App = () => {
 
   return (
     <div className={css(styles.container)}>
-      <div className={css(styles.flex_container)}>
-        <div className={css(styles.main_container)}>
+      <div className={css(styles.flexContainer)}>
+        <div className={css(styles.mainContainer)}>
           <TopBar toggleSidebar={toggleSidebar} />
 
-          <div className={css(styles.main_body_container)}>
-            {openSidebar !== SidebarType.CLOSED ? (
-              <div
-                className={css(
-                  openSidebar === SidebarType.DEFAULT && styles.sidebar_default,
-                )}
-              >
-                <Sidebar />
-              </div>
-            ) : null}
+          <div className={css(styles.mainBodyContainer)}>
+            {openSidebar !== SidebarType.CLOSED ? (<div className={css(openSidebar === SidebarType.DEFAULT && styles.sidebarDefault,)}><Sidebar /></div>): null}
             <Outlet />
           </div>
-          <div className={css(styles.footer_container)}>
+          <div className={css(styles.footerContainer)}>
             <Footer />
           </div>
         </div>
