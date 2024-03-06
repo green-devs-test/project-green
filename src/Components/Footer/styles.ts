@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12,
     zIndex: 1,
-    position: 'relative',
+    position: "relative",
     bottom: 0,
   },
   footerLink: {

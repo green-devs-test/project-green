@@ -1,76 +1,64 @@
 import { css } from "aphrodite";
-import styles from './styles';
-import Table from "../Table";
-import ProvinceSelector from "../ProvinceSelector";
-import LocalitySelector from "../LocalitySelector";
-import BtnSearch from "../BtnSearch";
-
-const Form = () => {
-
-  const SelectProvince = (province : string) => {
-    console.log(province);
-  };
-
-  const provinces = ['buenos aires', 'mendoza', 'Entre Rios'];
-  const cities = ['capital', 'mendoza', 'paraná'];
-
-    return (
-        <article>
-          <div>
-            <div>
-              <form className={css(styles.form)}>
-                <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} />
-                <LocalitySelector citiesNames={cities}/>
-                <div>
-                    <BtnSearch />  
-                </div>
-              </form>
-            </div>
-            <Table />
-            
-          </div>
-        </article>
-    );
-};
-
-export default Form;import { css } from "aphrodite";
-import styles from './styles';
+import styles from "./styles";
 import ProvinceSelector from "../ProvinceSelector";
 import LocalitySelector from "../LocalitySelector";
 import BtnSearch from "../BtnSearch";
 import Grid from "../Grid";
+import { useEffect, useState } from "react";
+import geoLocationService from "../../Services/GeoLocation.service";
+import { Province } from "../../Services/interfaces";
 
 const Form = () => {
+  const service = geoLocationService();
+  const [provinces, setProvinces] = useState<Province[]>([]);
+  const [provinceError, setProvinceError] = useState(false);
 
-  const SelectProvince = (province : string) => {
+  const SelectProvince = (province: string) => {
     console.log(province);
   };
-  const SelectCity = (city : string) => {
+  const SelectCity = (city: string) => {
     console.log(city);
   };
 
-  const provinces = ['buenos aires', 'mendoza', 'Entre Rios'];
-  const cities = ['capital', 'mendoza', 'paraná'];
+  useEffect(() => {
+    const getProvinces = async () => {
+      try {
+        const response = await service.getProvinces();
+        setProvinces(response);
+      } catch (error) {
+        console.error("Ocurrio un error");
+        setProvinceError(true);
+      }
+    };
+    getProvinces();
+  }, []);
 
-    return (
-        <article>
-          <div>
-            
+  const cities = ["capital", "mendoza", "paraná"];
+
+  return (
+    <article>
+      <div>
+        <div>
+          <form className={css(styles.form)}>
+            {provinceError ? (
+              <p>Ocurrio un error</p>
+            ) : (
+              <ProvinceSelector
+                provinceNames={provinces}
+                selectProvince={SelectProvince}
+              />
+            )}
+            <LocalitySelector citiesNames={cities} selectCity={SelectCity} />
             <div>
-              <form className={css(styles.form)}>
-                <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} />
-                <LocalitySelector citiesNames={cities} selectCity={SelectCity}/>
-                <div>
-                    <BtnSearch />  
-                </div>
-              </form>
+              <BtnSearch />
             </div>
+          </form>
+        </div>
 
-            <Grid />
-
-          </div>
-        </article>
-    );
+        <Grid />
+      </div>
+    </article>
+  );
 };
 
 export default Form;
