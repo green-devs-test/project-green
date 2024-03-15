@@ -6,7 +6,8 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Card from "../Card";
 import Body from "../Body";
-import ReSearch from "../ReSearch/ReSearch";
+import ReSearch from "../NewSearch/NewSearch";
+import SearchOptions from "../SearchOptions";
 
 const App = () => {
     return (
@@ -14,6 +15,10 @@ const App = () => {
         <TopBar />
         <Outlet />
         <ReSearch />
+        <SearchOptions />
+        <Card />
+        <Card />
+        <Card />
         <Card />
         <Footer />
       </>

@@ -2,7 +2,7 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
   topBar: {
-    backgroundColor: "red",
+    backgroundColor: "#fff",
     height: "50px",
     width: "100%",
     padding: "7px",
@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'flex-end',
     top: '0',
+    zIndex: 10,
   },
 });
 
