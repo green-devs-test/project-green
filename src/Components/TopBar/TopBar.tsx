@@ -1,7 +1,5 @@
 import styles from "./styles";
 import { css } from "aphrodite";
-import Icon from "../Icon/Icon";
-
 
 const TopBar = () => {
   return (
