@@ -2,20 +2,11 @@ import styles from "./styles";
 import { css } from "aphrodite";
 import Icon from "../Icon/Icon";
 
-interface TopBarProps {
-  toggleSidebar(): void;
-}
 
-const TopBar = (props: TopBarProps) => {
+const TopBar = () => {
   return (
     <div className={css(styles.topBar)}>
-      <div
-        onClick={() => props.toggleSidebar()}
-        className={css(styles.menuIconDefault)}
-      >
-        <Icon />
-      </div>
-      <div>LOGO</div>
+        <div>LOGO</div>
     </div>
   );
 };

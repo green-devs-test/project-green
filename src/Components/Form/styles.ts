@@ -3,8 +3,12 @@ import { StyleSheet } from "aphrodite";
 const styles = StyleSheet.create({
   form: {
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: "column",
+    width: '80%',
+    border: '2px solid black',
+    borderRadius: '15px',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
