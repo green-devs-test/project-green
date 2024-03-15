@@ -8,14 +8,9 @@ interface LocalitySelectorProps {
 const LocalitySelector = (props: LocalitySelectorProps) => {
   return (
     <>
-      <label className={css(styles.label)}>Seleccione una Localidad: </label>
-      <select className={css(styles.select)}>
-        {props.citiesNames.map((city, index) => (
-          <option key={index} className={css(styles.options)} value={city}>
-            {city}
-          </option>
-        ))}
-        ;
+      <label className={css(styles.label)}></label>
+      <select className={css(styles.newSearchDropdown)}>
+        {props.citiesNames.map((city, index) => ( <option key={index} className={css(styles.options)} value={city}> {city} </option>))};
       </select>
     </>
   );

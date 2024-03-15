@@ -1,2 +1,2 @@
-import ReSearch from "./NewSearch";
-export default ReSearch;
+import NewSearch from "./NewSearch";
+export default NewSearch;
