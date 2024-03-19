@@ -4,12 +4,14 @@ import ProvinceSelector from "../ProvinceSelector";
 import LocalitySelector from "../LocalitySelector";
 import BtnSearch from "../BtnSearch";
 import Grid from "../Grid";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import geoLocationService from "../../Services/GeoLocation.service";
 import { Province } from "../../Services/interfaces";
+import { GeoLocationContext } from "../../Context/GeoLocation.context";
 
 const Form = () => {
-  const service = geoLocationService();
+  const geoLocation = useContext(GeoLocationContext);
+
   const [provinces, setProvinces] = useState<Province[]>([]);
   const [provinceError, setProvinceError] = useState(false);
 
@@ -23,7 +25,7 @@ const Form = () => {
   useEffect(() => {
     const getProvinces = async () => {
       try {
-        const response = await service.getProvinces();
+        const response = await geoLocation.getProvinces();
         setProvinces(response);
       } catch (error) {
         console.error("Ocurrio un error");
@@ -40,7 +42,14 @@ const Form = () => {
       <div>
         <div>
           <form className={css(styles.form)}>
-            {provinceError ? ( <p>Ocurrio un error</p> ) : ( <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} /> )}
+            {provinceError ? (
+              <p>Ocurrio un error</p>
+            ) : (
+              <ProvinceSelector
+                provinceNames={provinces}
+                selectProvince={SelectProvince}
+              />
+            )}
             <LocalitySelector citiesNames={cities} selectCity={SelectCity} />
             <div>
               <BtnSearch />

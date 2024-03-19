@@ -4,13 +4,16 @@ import NewSearch from "../NewSearch";
 import Footer from "../Footer/Footer";
 import { css } from "aphrodite";
 import styles from "./styles";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Card from "../Card";
+import { GeoLocationContext } from "../../Context/GeoLocation.context";
 
 const App = () => {
-    return (
-      <>
+  const geoLocation = useContext(GeoLocationContext);
+  return (
+    <>
+      <GeoLocationContext.Provider value={geoLocation}>
         <TopBar />
         <NewSearch />
         <SearchOptions />
@@ -20,8 +23,8 @@ const App = () => {
         <Card />
         <Card />
         <Footer />
-      </>
-    )
-
+      </GeoLocationContext.Provider>
+    </>
+  );
 };
 export default App;
