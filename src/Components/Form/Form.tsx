@@ -39,7 +39,7 @@ const Form = () => {
     <article>
       <div>
         <div>
-          <form className={css(styles.form)}>
+          <form className={css(styles.formContainer)}>
             {provinceError ? ( <p>Ocurrio un error</p> ) : ( <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} /> )}
             <LocalitySelector citiesNames={cities} selectCity={SelectCity} />
             <div>
@@ -48,7 +48,6 @@ const Form = () => {
           </form>
         </div>
 
-        <Grid />
       </div>
     </article>
   );

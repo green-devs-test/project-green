@@ -1,7 +1,10 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  form: {
+  formContainer: {
+    backgroundColor: '#fff',
+    margin: 'auto',
+    padding: 10,
     display: "flex",
     flexDirection: "column",
     width: '80%',

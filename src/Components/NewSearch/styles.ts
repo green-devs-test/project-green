@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
-      marginTop: 50,
   },
   newSearchDropdown: {
     border: '2px solid black',
