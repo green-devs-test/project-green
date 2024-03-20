@@ -16,6 +16,7 @@ const App = () => {
         <Footer />
       </GeoLocationContext.Provider>
     </>
-  );
-};
+  )
+}
+
 export default App;
