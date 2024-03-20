@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#c2eaba",
     padding: "10px",
     marginTop: "3px",
-    textAlign: 'center',
+    textAlign: "center",
   },
   CardMaterials: {
     justifyContent: "center",
@@ -45,14 +45,14 @@ const styles = StyleSheet.create({
     verticalAlign: "text-bottom",
   },
   CardMaterialsContainer: {
-    display: 'flex',
-    flexFlow: 'wrap',
-    justifyContent: 'center',
+    display: "flex",
+    flexFlow: "wrap",
+    justifyContent: "center",
   },
   buttonsContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'row',
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "row",
   },
   cardButton: {
     backgroundColor: "#84b884",
