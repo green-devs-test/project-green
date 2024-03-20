@@ -26,12 +26,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  sidebarDefault: {
-    "@media (max-width: 1024px)": {
-      display: "none",
-      width: "30%",
-    },
-  },
 });
 
 export default styles;

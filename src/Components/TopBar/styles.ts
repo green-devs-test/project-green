@@ -2,24 +2,20 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
   topBar: {
-    backgroundColor: "#a7c4a0",
+    backgroundColor: "#fff",
+    fontWeight: 'bolder',
+    fontSize: '1.5rem',
+    verticalAlign: 'text-bottom',
     height: "50px",
     width: "100%",
-    padding: "7px",
+    padding: "10px",
     boxSizing: "border-box",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    boxShadow: "0px 10px 10px -8px gray",
-    marginBottom: 20,
+    borderBottom: '2px solid black',
     position: "fixed",
-    zIndex: 5,
-  },
-
-  menuIconDefault: {
-    "@media (min-width: 1024px)": {
-      visibility: "hidden",
-    },
+    display: 'flex',
+    justifyContent: 'flex-start',
+    top: '0',
+    zIndex: 10,
   },
 });
 

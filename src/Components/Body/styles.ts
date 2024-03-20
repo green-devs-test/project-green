@@ -1,19 +1,23 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  body: {
+  bodyContainer: {
+    backgroundColor: '#84b884',
+    color: '#fff',
     height: "auto",
     padding: 7,
-    marginTop: 40,
+    marginTop: 25,
     boxSizing: "border-box",
     zIndex: 1,
   },
   h1: {
     textAlign: "center",
+    fontSize: '2.5rem'
   },
   mainInstructions: {
-    textAlign: "center",
-    fontSize: "18px",
+    textAlign: "justify",
+    fontSize: "1.3rem",
+    margin: 10,
   },
 });
 

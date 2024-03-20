@@ -12,23 +12,15 @@ const styles = StyleSheet.create({
 
   card: {
     position: "relative",
-    width: "350px",
+    width: "100%",
     minWidth: "150px",
-    margin: "20px",
-    border: "1px solid black",
-    borderRadius: "6px",
+    margin: "5px",
+    borderTop: "1px solid black",
+    borderBottom: "1px solid black",
     overflow: "hidden",
-    background: "#FFF",
     cursor: "default",
-    transition: "all 400ms ease",
-    boxShadow: "0px 1px 10px rgba(0, 0, 0, 0.2)",
-    padding: "15px",
-    textAlign: "center",
-
-    ":hover": {
-      boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.4)",
-      transform: "translateY(-3%)",
-    },
+    padding: "3px",
+    textAlign: "left",
   },
   cardContent: {
     color: "back",
@@ -36,6 +28,8 @@ const styles = StyleSheet.create({
   spotName: {
     backgroundColor: "#c2eaba",
     padding: "10px",
+    marginTop: "3px",
+    textAlign: 'center',
   },
   CardMaterials: {
     justifyContent: "center",
@@ -50,10 +44,21 @@ const styles = StyleSheet.create({
   cardAdress: {
     verticalAlign: "text-bottom",
   },
-  cardBtnLocation: {
+  CardMaterialsContainer: {
+    display: 'flex',
+    flexFlow: 'wrap',
+    justifyContent: 'center',
+  },
+  buttonsContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  cardButton: {
     backgroundColor: "#84b884",
     textDecoration: "none",
     padding: "10px 10px",
+    margin: "3px 5px",
     color: "#fff",
     border: "none",
     fontSize: "1rem",
