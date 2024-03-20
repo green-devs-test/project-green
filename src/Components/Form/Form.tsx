@@ -3,9 +3,7 @@ import styles from "./styles";
 import ProvinceSelector from "../ProvinceSelector";
 import LocalitySelector from "../LocalitySelector";
 import BtnSearch from "../BtnSearch";
-import Grid from "../Grid";
 import { useContext, useEffect, useState } from "react";
-import geoLocationService from "../../Services/GeoLocation.service";
 import { Province } from "../../Services/interfaces";
 import { GeoLocationContext } from "../../Context/GeoLocation.context";
 
@@ -18,7 +16,7 @@ const Form = () => {
   const SelectProvince = (province: string) => {
     console.log(province);
   };
-  const SelectCity = (city: string) => {
+  const SelectLocality = (city: string) => {
     console.log(city);
   };
 
@@ -33,9 +31,9 @@ const Form = () => {
       }
     };
     getProvinces();
-  }, []);
+  }, [geoLocation]);
 
-  const cities = ["capital", "mendoza", "paraná"];
+  const localities = ["capital", "mendoza", "paraná"];
 
   return (
     <article>
@@ -43,7 +41,7 @@ const Form = () => {
         <div>
           <form className={css(styles.formContainer)}>
             {provinceError ? ( <p>Ocurrio un error</p> ) : ( <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} /> )}
-            <LocalitySelector citiesNames={cities} selectCity={SelectCity} />
+            <LocalitySelector localitiesNames={localities} selectLocality={SelectLocality} />
             <div>
               <BtnSearch />
             </div>

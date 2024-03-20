@@ -1,6 +1,5 @@
 import { css } from "aphrodite";
 import styles from "./styles";
-import { useState } from "react";
 import { Province } from "../../Services/interfaces";
 
 interface ProvinceSelectorProps {
@@ -9,7 +8,6 @@ interface ProvinceSelectorProps {
   selectProvince(province: string): void;
 }
 const ProvinceSelector = (props: ProvinceSelectorProps) => {
-  const [value, setValue] = useState();
 
   return (
     <>

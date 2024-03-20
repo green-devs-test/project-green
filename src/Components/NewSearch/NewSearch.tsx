@@ -2,12 +2,11 @@ import { css } from "aphrodite";
 import styles from "./styles";
 import ProvinceSelector from "../ProvinceSelector";
 import LocalitySelector from "../LocalitySelector";
-import geoLocationService from "../../Services/GeoLocation.service";
 import { useContext, useEffect, useState } from "react";
 import { Province } from "../../Services/interfaces";
 import { GeoLocationContext } from "../../Context/GeoLocation.context";
 
-const ReSearch = () => {
+const NewSearch = () => {
   const geoLocation = useContext(GeoLocationContext);
 
   const [provinces, setProvinces] = useState<Province[]>([]);
@@ -31,17 +30,12 @@ const ReSearch = () => {
       }
     };
     getProvinces();
-  }, []);
+  }, [geoLocation]);
 
   const cities = ["capital", "mendoza", "paraná"];
 
   return (
     <>
-      {/* <form className={css(styles.newSearchContainer)}>
-            <input className={css(styles.newSearchDropdown)} type="text" placeholder="Provincia"/>
-            <input className={css(styles.newSearchDropdown)} type="text" placeholder="Localidad"/>
-            <button className={css(styles.newSearchButton)}>🔎</button>
-        </form> */}
       <form className={css(styles.newSearchContainer)}>
         {provinceError ? (
           <p className={css(styles.newSearchDropdown)}> Ocurrio un error</p>
@@ -51,11 +45,11 @@ const ReSearch = () => {
             selectProvince={SelectProvince}
           />
         )}
-        <LocalitySelector citiesNames={cities} selectCity={SelectCity} />
+        <LocalitySelector localitiesNames={cities} selectLocality={SelectCity} />
         <button className={css(styles.newSearchButton)}>🔎</button>
       </form>
     </>
   );
 };
 
-export default ReSearch;
+export default NewSearch;

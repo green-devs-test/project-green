@@ -1,8 +1,6 @@
 import TopBar from "../TopBar/TopBar";
 import Footer from "../Footer/Footer";
-import { css } from "aphrodite";
-import styles from "./styles";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import { GeoLocationContext } from "../../Context/GeoLocation.context";
 

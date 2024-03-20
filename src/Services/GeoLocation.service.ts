@@ -1,4 +1,4 @@
-import { Province, Spot } from "./interfaces";
+import { Province, Locality } from "./interfaces";
 
 const geoLocationService = () => {
   // maybe this could go on a context
@@ -26,7 +26,7 @@ const geoLocationService = () => {
       });
   };
 
-  const getLocations = (province: string): Promise<string[]> => {
+  const getLocalities = (province: string): Promise<Locality[]> => {
     return fetch(`${process.env.REACT_APP_API_URL}/provinces/${province}`, {
       method: "GET",
       mode: "cors",
@@ -49,7 +49,7 @@ const geoLocationService = () => {
       });
   };
 
-  const getSpots = (province: string, location: string): Promise<Spot[]> => {
+  const getSpots = (province: string, location: string): Promise<Locality[]> => {
     return fetch(
       `${process.env.REACT_APP_API_URL}/provinces/${province}/${location}`,
       {
@@ -77,7 +77,7 @@ const geoLocationService = () => {
 
   return {
     getProvinces,
-    getLocations,
+    getLocalities,
     getSpots,
   };
 };

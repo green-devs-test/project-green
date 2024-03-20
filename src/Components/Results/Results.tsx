@@ -4,7 +4,7 @@ import SearchOptions from "../SearchOptions";
 import styles from "./styles";
 import { css } from "aphrodite";
 
-const Resultados = () => {
+const Results = () => {
   return (
     <div className={css(styles.estilo)}>
         <NewSearch />
@@ -14,4 +14,4 @@ const Resultados = () => {
   );
 };
 
-export default Resultados;
+export default Results;

@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./Components/Body/Body";
 import About from "./Components/About";
 import ErrorPage from "./Components/ErrorPage";
-import Resultados from "./Components/Resultados";
+import Results from "./Components/Results";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "buscador",
-        element: <Resultados />
+        element: <Results />
       },
     ],
   },
