@@ -2,8 +2,8 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
   bodyContainer: {
-    backgroundColor: '#84b884',
-    color: '#fff',
+    backgroundColor: "#84b884",
+    color: "#fff",
     height: "auto",
     padding: 7,
     marginTop: 25,
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
   h1: {
     textAlign: "center",
-    fontSize: '2.5rem'
+    fontSize: "2.5rem",
   },
   mainInstructions: {
     textAlign: "justify",

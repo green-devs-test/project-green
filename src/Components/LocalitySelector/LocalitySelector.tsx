@@ -10,7 +10,13 @@ const LocalitySelector = (props: LocalitySelectorProps) => {
     <>
       <label className={css(styles.label)}></label>
       <select className={css(styles.newSearchDropdown)}>
-        {props.localitiesNames.map((locality, index) => ( <option key={index} className={css(styles.options)} value={locality}> {locality} </option>))};
+        {props.localitiesNames.map((locality, index) => (
+          <option key={index} className={css(styles.options)} value={locality}>
+            {" "}
+            {locality}{" "}
+          </option>
+        ))}
+        ;
       </select>
     </>
   );

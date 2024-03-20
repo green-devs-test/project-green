@@ -40,14 +40,23 @@ const Form = () => {
       <div>
         <div>
           <form className={css(styles.formContainer)}>
-            {provinceError ? ( <p>Ocurrio un error</p> ) : ( <ProvinceSelector provinceNames={provinces} selectProvince={SelectProvince} /> )}
-            <LocalitySelector localitiesNames={localities} selectLocality={SelectLocality} />
+            {provinceError ? (
+              <p>Ocurrio un error</p>
+            ) : (
+              <ProvinceSelector
+                provinceNames={provinces}
+                selectProvince={SelectProvince}
+              />
+            )}
+            <LocalitySelector
+              localitiesNames={localities}
+              selectLocality={SelectLocality}
+            />
             <div>
               <BtnSearch />
             </div>
           </form>
         </div>
-
       </div>
     </article>
   );

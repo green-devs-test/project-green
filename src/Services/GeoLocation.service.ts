@@ -49,7 +49,10 @@ const geoLocationService = () => {
       });
   };
 
-  const getSpots = (province: string, location: string): Promise<Locality[]> => {
+  const getSpots = (
+    province: string,
+    location: string,
+  ): Promise<Locality[]> => {
     return fetch(
       `${process.env.REACT_APP_API_URL}/provinces/${province}/${location}`,
       {

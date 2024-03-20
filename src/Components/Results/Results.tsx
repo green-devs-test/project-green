@@ -7,9 +7,9 @@ import { css } from "aphrodite";
 const Results = () => {
   return (
     <div className={css(styles.estilo)}>
-        <NewSearch />
-        <SearchOptions />
-        <Grid />
+      <NewSearch />
+      <SearchOptions />
+      <Grid />
     </div>
   );
 };

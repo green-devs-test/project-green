@@ -3,7 +3,7 @@ import { relative } from "path";
 
 const styles = StyleSheet.create({
   footer: {
-    backgroundColor: '#e3e3e3',
+    backgroundColor: "#e3e3e3",
     padding: 7,
     textAlign: "center",
     fontSize: 12,

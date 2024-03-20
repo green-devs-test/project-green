@@ -10,11 +10,11 @@ const App = () => {
     <>
       <GeoLocationContext.Provider value={geoLocation}>
         <TopBar />
-        <Outlet />      
+        <Outlet />
         <Footer />
       </GeoLocationContext.Provider>
     </>
-  )
-}
+  );
+};
 
 export default App;

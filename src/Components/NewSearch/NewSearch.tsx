@@ -45,7 +45,10 @@ const NewSearch = () => {
             selectProvince={SelectProvince}
           />
         )}
-        <LocalitySelector localitiesNames={cities} selectLocality={SelectCity} />
+        <LocalitySelector
+          localitiesNames={cities}
+          selectLocality={SelectCity}
+        />
         <button className={css(styles.newSearchButton)}>🔎</button>
       </form>
     </>
