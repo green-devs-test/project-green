@@ -68,6 +68,9 @@ const styles = StyleSheet.create({
       background: "#5a965a",
     },
   },
+  icon: {
+    fontSize: 19,
+  },
 });
 
 export default styles;
