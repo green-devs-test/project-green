@@ -5,10 +5,10 @@ import LocalitySelector from "../LocalitySelector";
 import BtnSearch from "../BtnSearch";
 import { useContext, useEffect, useState } from "react";
 import { Province } from "../../Services/interfaces";
-import { GeoLocationContext } from "../../Context/GeoLocation.context";
+import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 
 const Form = () => {
-  const geoLocation = useContext(GeoLocationContext);
+  const geoLocality = useContext(GeoLocalityContext);
 
   const [provinces, setProvinces] = useState<Province[]>([]);
   const [provinceError, setProvinceError] = useState(false);
@@ -23,7 +23,7 @@ const Form = () => {
   useEffect(() => {
     const getProvinces = async () => {
       try {
-        const response = await geoLocation.getProvinces();
+        const response = await geoLocality.getProvinces();
         setProvinces(response);
       } catch (error) {
         console.error("Ocurrio un error");
@@ -31,7 +31,7 @@ const Form = () => {
       }
     };
     getProvinces();
-  }, [geoLocation]);
+  }, [geoLocality]);
 
   const localities = ["capital", "mendoza", "paraná"];
 
