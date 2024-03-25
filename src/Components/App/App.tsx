@@ -2,17 +2,17 @@ import TopBar from "../TopBar/TopBar";
 import Footer from "../Footer/Footer";
 import { useContext } from "react";
 import { Outlet } from "react-router-dom";
-import { GeoLocationContext } from "../../Context/GeoLocation.context";
+import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 
 const App = () => {
-  const geoLocation = useContext(GeoLocationContext);
+  const geoLocality = useContext(GeoLocalityContext);
   return (
     <>
-      <GeoLocationContext.Provider value={geoLocation}>
+      <GeoLocalityContext.Provider value={geoLocality}>
         <TopBar />
         <Outlet />
         <Footer />
-      </GeoLocationContext.Provider>
+      </GeoLocalityContext.Provider>
     </>
   );
 };
