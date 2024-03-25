@@ -5,7 +5,7 @@ import LocalitySelector from "../LocalitySelector";
 import BtnSearch from "../BtnSearch";
 import { useContext, useEffect, useState } from "react";
 import { Province } from "../../Services/interfaces";
-import { GeoLocalityContext as GeoLocalityContext } from "../../Context/GeoLocality.context";
+import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 
 const Form = () => {
   const geoLocality = useContext(GeoLocalityContext);
