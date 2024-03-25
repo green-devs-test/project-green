@@ -1,7 +1,6 @@
-import { Province, Locality } from "./interfaces";
+import { Locality, Province, Spots } from "./interfaces";
 
 const geoLocalityService = () => {
-  // maybe this could go on a context
 
   const getProvinces = (): Promise<Province[]> => {
     return fetch(process.env.REACT_APP_API_URL + "/provinces/", {
@@ -52,7 +51,7 @@ const geoLocalityService = () => {
   const getSpots = (
     province: string,
     location: string,
-  ): Promise<Locality[]> => {
+  ): Promise<Spots[]> => {
     return fetch(
       `${process.env.REACT_APP_API_URL}/provinces/${province}/${location}`,
       {
