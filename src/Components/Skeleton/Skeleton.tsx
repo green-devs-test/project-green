@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
+import GoUpButton from "../GoUpButton";
 
 const Skeleton = () => {
   const geoLocality = useContext(GeoLocalityContext);
@@ -11,6 +12,7 @@ const Skeleton = () => {
       <GeoLocalityContext.Provider value={geoLocality}>
         <TopBar />
         <Outlet />
+        <GoUpButton />
         <Footer />
       </GeoLocalityContext.Provider>
     </>
