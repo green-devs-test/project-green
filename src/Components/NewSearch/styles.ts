@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+    marginTop: 50,
   },
   newSearchDropdown: {
     border: "2px solid black",
@@ -40,6 +41,9 @@ const styles = StyleSheet.create({
     ":active": {
       background: "#5a965a",
     },
+  },
+  icon: {
+    fontSize: 30,
   },
 });
 

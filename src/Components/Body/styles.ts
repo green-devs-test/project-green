@@ -4,8 +4,10 @@ const styles = StyleSheet.create({
   bodyContainer: {
     backgroundColor: "#84b884",
     color: "#fff",
+    maxWidth: 900,
     height: "auto",
     padding: 7,
+    margin: 'auto',
     marginTop: 25,
     boxSizing: "border-box",
     zIndex: 1,

@@ -5,6 +5,8 @@ import LocalitySelector from "../LocalitySelector";
 import { useContext, useEffect, useState } from "react";
 import { Province } from "../../Services/interfaces";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const NewSearch = () => {
   const geoLocality = useContext(GeoLocalityContext);
@@ -49,7 +51,7 @@ const NewSearch = () => {
           localitiesNames={cities}
           selectLocality={SelectCity}
         />
-        <button className={css(styles.newSearchButton)}>🔎</button>
+        <button className={css(styles.newSearchButton)}><FontAwesomeIcon icon={faMagnifyingGlass} className={css(styles.icon)}/></button>
       </form>
     </>
   );

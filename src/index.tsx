@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Components/App/App";
+import Skeleton from "./Components/Skeleton/Skeleton";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Body from "./Components/Body/Body";
@@ -11,7 +11,7 @@ import Results from "./Components/Results";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Skeleton />,
     errorElement: <ErrorPage />,
     children: [
       {

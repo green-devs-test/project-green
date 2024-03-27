@@ -1,5 +1,4 @@
 import { StyleSheet } from "aphrodite";
-import { relative } from "path";
 
 const styles = StyleSheet.create({
   footer: {
