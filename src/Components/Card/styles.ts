@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     minWidth: "150px",
     margin: "5px",
     borderTop: "1px solid black",
-    borderBottom: "1px solid black",
     overflow: "hidden",
     cursor: "default",
     padding: "3px",
@@ -26,13 +25,12 @@ const styles = StyleSheet.create({
     color: "back",
   },
   spotName: {
-    backgroundColor: "#c2eaba",
     padding: "10px",
     marginTop: "3px",
-    textAlign: "center",
+    textAlign: "left",
   },
   CardMaterials: {
-    justifyContent: "center",
+    justifyContent: "flex-start",
     textAlign: "center",
     display: "inline-block",
     padding: "5px",
@@ -47,11 +45,11 @@ const styles = StyleSheet.create({
   CardMaterialsContainer: {
     display: "flex",
     flexFlow: "wrap",
-    justifyContent: "center",
+    justifyContent: "flex-start",
   },
   buttonsContainer: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     flexDirection: "row",
   },
   cardButton: {
