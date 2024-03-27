@@ -1,9 +1,14 @@
 import { css } from "aphrodite";
 import styles from "./styles";
-import { FaBars } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass, faSliders, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 export const Icon = () => {
-  return <FaBars className={css(styles.icon)} />;
+  return <FontAwesomeIcon icon={faLocationDot} className={css(styles.icon)}/>;
+
 };
 
 export default Icon;

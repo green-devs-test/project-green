@@ -1,8 +1,11 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  estilo: {
-    color: "black",
+  resultsContainer: {
+    maxWidth: 900,
+    margin: 'auto',
+    height: '100%',
+    minHeight: '100vh',
   },
 });
 

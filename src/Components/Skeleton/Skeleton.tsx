@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import GoUpButton from "../GoUpButton";
 
-const App = () => {
+const Skeleton = () => {
   const geoLocality = useContext(GeoLocalityContext);
   return (
     <>
@@ -19,4 +19,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Skeleton;

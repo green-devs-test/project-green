@@ -6,7 +6,7 @@ import { css } from "aphrodite";
 
 const Results = () => {
   return (
-    <div className={css(styles.estilo)}>
+    <div className={css(styles.resultsContainer)}>
       <NewSearch />
       <SearchOptions />
       <Grid />

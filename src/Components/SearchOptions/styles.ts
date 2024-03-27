@@ -12,14 +12,13 @@ const styles = StyleSheet.create({
   },
   numbersOfResults: {
     width: "100%",
-    textAlign: "center",
+    textAlign: "start",
     fontWeight: 900,
     fontSize: "1.1rem",
   },
   searchOptions: {
     backgroundColor: "#84b884",
     textDecoration: "none",
-    width: "100%",
     padding: "7px",
     margin: "3px 5px",
     color: "#fff",
@@ -30,6 +29,9 @@ const styles = StyleSheet.create({
     ":active": {
       background: "#5a965a",
     },
+  },
+  icon: {
+    fontSize: 30,
   },
 });
 
