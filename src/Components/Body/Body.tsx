@@ -1,6 +1,6 @@
 import { css } from "aphrodite";
 import styles from "./styles";
-import Form from "../Form";
+import HomeSearchBox from "../HomeSearchBox";
 
 const Body = () => {
   return (
@@ -14,7 +14,7 @@ const Body = () => {
           buscar resultados. Recibirás los puntos de reciclaje mas proximos con
           su ubicacion y el tipo de material que reciben para el reciclaje.
         </p>
-        <Form />
+        <HomeSearchBox />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import ProvinceSelector from './ProvinceSelector';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import { Province } from '../../Services/interfaces';
+import { Province } from '../../Services/GeoLocality.interfaces';
 import { StyleSheetTestUtils } from 'aphrodite';
 
 beforeEach(() => {

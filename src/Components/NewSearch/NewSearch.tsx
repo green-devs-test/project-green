@@ -3,7 +3,7 @@ import styles from "./styles";
 import ProvinceSelector from "../ProvinceSelector";
 import LocalitySelector from "../LocalitySelector";
 import { useContext, useEffect, useState } from "react";
-import { Province } from "../../Services/interfaces";
+import { Locality, Province } from "../../Services/GeoLocality.interfaces";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 
 const NewSearch = () => {
@@ -11,6 +11,7 @@ const NewSearch = () => {
 
   const [provinces, setProvinces] = useState<Province[]>([]);
   const [provinceError, setProvinceError] = useState(false);
+  // refactor here to add data flow
 
   const SelectProvince = (province: string) => {
     console.log(province);
@@ -32,7 +33,11 @@ const NewSearch = () => {
     getProvinces();
   }, [geoLocality]);
 
-  const cities = ["capital", "mendoza", "paraná"];
+  const localities: Locality[] = [{
+    id: 1,
+    name: "placeholder",
+    spots: []
+  }];
 
   return (
     <>
@@ -46,7 +51,7 @@ const NewSearch = () => {
           />
         )}
         <LocalitySelector
-          localitiesNames={cities}
+          localitiesNames={localities}
           selectLocality={SelectCity}
         />
         <button className={css(styles.newSearchButton)}>🔎</button>

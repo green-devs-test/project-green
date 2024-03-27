@@ -1,6 +1,6 @@
 import { css } from "aphrodite";
 import styles from "./styles";
-import { Province } from "../../Services/interfaces";
+import { Province } from "../../Services/GeoLocality.interfaces";
 
 interface ProvinceSelectorProps {
   provinceNames: Province[];

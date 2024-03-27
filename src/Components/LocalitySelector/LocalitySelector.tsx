@@ -1,19 +1,20 @@
 import { css } from "aphrodite";
 import styles from "./styles";
+import { Locality } from "../../Services/GeoLocality.interfaces";
 
 interface LocalitySelectorProps {
-  localitiesNames: string[];
+  localitiesNames: Locality[];
   selectLocality(locality: string): void;
 }
 const LocalitySelector = (props: LocalitySelectorProps) => {
   return (
     <>
       <label className={css(styles.label)}></label>
-      <select className={css(styles.newSearchDropdown)}>
+      <select className={css(styles.newSearchDropdown)} onChange={(e) => props.selectLocality(e.target.value)} >
         {props.localitiesNames.map((locality, index) => (
-          <option key={index} className={css(styles.options)} value={locality}>
+          <option key={index} className={css(styles.options)} value={locality.name}>
             {" "}
-            {locality}{" "}
+            {locality.name}{" "}
           </option>
         ))}
         ;
