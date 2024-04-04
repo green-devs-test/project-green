@@ -7,17 +7,20 @@ import { useContext, useEffect, useState } from "react";
 import { Locality, Province } from "../../Services/GeoLocality.interfaces";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import { SessionStorageContext } from "../../Context/SessionStorage.context";
+import { useNavigate } from "react-router-dom";
 
 const HomeSearchBox = () => {
   const geoLocality = useContext(GeoLocalityContext);
   const sessionStorage = useContext(SessionStorageContext);
+
+  const navigate = useNavigate();
 
   const [provinces, setProvinces] = useState<Province[]>([]);
   const [provinceError, setProvinceError] = useState(false);
   const [provinceSelected, setProvinceSelected] = useState("");
 
   const [localities, setLocalities] = useState<Locality[]>([]);
-  const [localityError, setLocalityError] = useState(false);
+  const [localitiesError, setLocalitiesError] = useState(false);
   const [localitySelected, setLocalitySelected] = useState("");
 
   const selectProvince = (province: string) => {
@@ -27,10 +30,9 @@ const HomeSearchBox = () => {
     setLocalitySelected(locality);
   };
   const saveData = () => {
-    console.log("Save data", provinceSelected, localitySelected);
-    sessionStorage.save(provinceSelected, localitySelected)
+    sessionStorage.save(provinceSelected, localitySelected);
+    navigate("/buscador");
   }
-
   useEffect(() => {
     const getProvinces = async () => {
       try {
@@ -54,7 +56,7 @@ const HomeSearchBox = () => {
         setLocalitySelected(response[0].name)
       } catch (error) {
         console.error("Ocurrio un error");
-        setLocalityError(true);
+        setLocalitiesError(true);
       }
     };
     getSpots();
@@ -74,7 +76,7 @@ const HomeSearchBox = () => {
                 selectProvince={selectProvince}
               />
             )}
-            {localityError ?
+            {localitiesError ?
               <p>Ocurrio un error</p>
             : <LocalitySelector
               localitiesNames={localities}
