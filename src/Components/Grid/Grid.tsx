@@ -1,11 +1,16 @@
+import { Spots } from "../../Services/interfaces";
 import Card from "../Card";
 
-const Grid = () => {
+interface GridProps {
+  spots: Spots[];
+}
+
+const Grid = (props: GridProps) => {
   return (
     <>
-      <Card />
-      <Card />
-      <Card />
+      {props.spots.map((spot)  => (
+        <Card spot={spot} key={`spot-${spot.id}`}/>
+      ))}
     </>
   );
 };
