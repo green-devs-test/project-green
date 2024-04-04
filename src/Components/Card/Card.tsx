@@ -1,34 +1,50 @@
 import { css } from "aphrodite";
 import styles from "./styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { Spot } from "../../Services/GeoLocality.interfaces";
 
-const Card = () => {
+interface CardProps {
+  spot: Spot;
+}
+
+const Card = (props: CardProps) => {
+  // TODO: implement the telephone button
   return (
     <>
       <div className={css(styles.containerCards)}>
         <div className={css(styles.card)}>
           <div className={css(styles.cardContent)}>
-            <h3 className={css(styles.spotName)}>
-              [NOMRE DEL PUNTO DE RECICLAJE]
-            </h3>
+            <h3 className={css(styles.spotName)}>{props.spot.name}</h3>
             <p>
-              <b>Direccion:</b> Callefalsa 123 y Esquina Aveces Llueve{" "}
-            </p>
-            <p>
-              <b>Barrio:</b> Bonita Vecindad{" "}
+              <b>Direccion:</b> {props.spot.address}
             </p>
             <div className={css(styles.cardAdress)}>
               <div className={css(styles.CardMaterialsContainer)}>
-                <p className={css(styles.CardMaterials)}>#Papel</p>
-                <p className={css(styles.CardMaterials)}>#Plastico</p>
-                <p className={css(styles.CardMaterials)}>#Vidrio</p>
-                <p className={css(styles.CardMaterials)}>#Carton</p>
-                <p className={css(styles.CardMaterials)}>#Metal</p>
+                {props.spot.materials.map((material) => (
+                  <p className={css(styles.CardMaterials)} key={props.spot.id+material} >{material}</p>
+                ))}
               </div>
               <div className={css(styles.buttonsContainer)}>
-                <button className={css(styles.cardButton)}>Telefono 📞</button>
                 <button className={css(styles.cardButton)}>
-                  Ver Ubicación 📍
+                  Telefono{" "}
+                  
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    className={css(styles.icon)}
+                  />
                 </button>
+                {props.spot.link && (
+                  <a href={props.spot.link} className={css(styles.cardButton)} target="_blank" rel="noreferrer" >
+                    <button className={css(styles.cardButton)}>
+                      Ver Ubicación{" "}
+                      <FontAwesomeIcon
+                        icon={faLocationDot}
+                        className={css(styles.icon)}
+                      />
+                    </button>
+                  </a>
+                )}
               </div>
             </div>
           </div>

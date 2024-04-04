@@ -1,13 +1,16 @@
-import { css } from "aphrodite";
-import styles from "./styles";
+import { Spot } from "../../Services/GeoLocality.interfaces";
 import Card from "../Card";
 
-const Grid = () => {
+interface GridProps {
+  spots: Spot[];
+}
+
+const Grid = (props: GridProps) => {
   return (
     <>
-      <Card />
-      <Card />
-      <Card />
+      {props.spots.map((spot)  => (
+        <Card spot={spot} key={`spot-${spot.id}`}/>
+      ))}
     </>
   );
 };

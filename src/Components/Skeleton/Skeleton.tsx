@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import { SessionStorageContext } from "../../Context/SessionStorage.context";
 
-const App = () => {
+const Skeleton = () => {
   const geoLocality = useContext(GeoLocalityContext);
   const sessionStorage = useContext(SessionStorageContext);
   return (
@@ -21,4 +21,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Skeleton;

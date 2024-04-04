@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     verticalAlign: "text-bottom",
     height: "50px",
     width: "100%",
+    margin: 'auto',
     padding: "10px",
     boxSizing: "border-box",
     borderBottom: "2px solid black",
