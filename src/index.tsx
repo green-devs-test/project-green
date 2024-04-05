@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import Skeleton from "./Components/Skeleton/Skeleton";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Body from "./Components/Body/Body";
+import Home from "./Components/Home/Home";
 import About from "./Components/About";
 import ErrorPage from "./Components/ErrorPage";
-import Results from "./Components/Results";
+import Seeker from "./Components/Seeker";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <Home />,
       },
       {
         path: "about",
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "buscador",
-        element: <Results />,
+        element: <Seeker />,
       },
     ],
   },

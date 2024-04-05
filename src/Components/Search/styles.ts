@@ -1,13 +1,13 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  newSearchContainer: {
+  SearchContainer: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     marginTop: 50,
   },
-  newSearchDropdown: {
+  SearchDropdown: {
     border: "2px solid black",
     borderRadius: "12px",
     margin: "5px",
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
       background: "#5a965a",
     },
   },
-  newSearchButton: {
+  SearchButton: {
     backgroundColor: "#84b884",
     textDecoration: "none",
     padding: "7px",

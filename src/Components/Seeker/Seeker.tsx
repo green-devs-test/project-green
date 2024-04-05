@@ -1,13 +1,13 @@
 import { useContext, useEffect } from "react";
 import { Spot } from "../../Services/GeoLocality.interfaces";
 import Grid from "../Grid";
-import NewSearch from "../NewSearch";
+import Search from "../Search";
 import SearchOptions from "../SearchOptions";
 import styles from "./styles";
 import { css } from "aphrodite";
 import { SessionStorageContext } from "../../Context/SessionStorage.context";
 
-const Results = () => {
+const Seeker = () => {
 
   const sessionStorage = useContext(SessionStorageContext);
 
@@ -47,11 +47,11 @@ const Results = () => {
 
   return (
     <div className={css(styles.resultsContainer)}>
-      <NewSearch />
+      <Search />
       <SearchOptions />
       <Grid spots={spotsDataTest}/>
     </div>
   );
 };
 
-export default Results;
+export default Seeker;
