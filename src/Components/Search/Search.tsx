@@ -8,7 +8,7 @@ import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-const NewSearch = () => {
+const Search = () => {
   const geoLocality = useContext(GeoLocalityContext);
 
   const [provinces, setProvinces] = useState<Province[]>([]);
@@ -38,9 +38,9 @@ const NewSearch = () => {
 
   return (
     <>
-      <form className={css(styles.newSearchContainer)}>
+      <form className={css(styles.SearchContainer)}>
         {provinceError ? (
-          <p className={css(styles.newSearchDropdown)}> Ocurrio un error</p>
+          <p className={css(styles.SearchDropdown)}> Ocurrio un error</p>
         ) : (
           <ProvinceSelector
             provinceNames={provinces}
@@ -51,10 +51,10 @@ const NewSearch = () => {
           localitiesNames={cities}
           selectLocality={SelectCity}
         />
-        <button className={css(styles.newSearchButton)}><FontAwesomeIcon icon={faMagnifyingGlass} className={css(styles.icon)}/></button>
+        <button className={css(styles.SearchButton)}><FontAwesomeIcon icon={faMagnifyingGlass} className={css(styles.icon)}/></button>
       </form>
     </>
   );
 };
 
-export default NewSearch;
+export default Search;

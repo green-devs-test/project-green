@@ -1,11 +1,11 @@
 import { Spots } from "../../Services/interfaces";
 import Grid from "../Grid";
-import NewSearch from "../NewSearch";
+import Search from "../Search";
 import SearchOptions from "../SearchOptions";
 import styles from "./styles";
 import { css } from "aphrodite";
 
-const Results = () => {
+const Seeker = () => {
 
   const spotsDataTest: Spots[]  = [{
     id: 1,
@@ -40,11 +40,11 @@ const Results = () => {
 
   return (
     <div className={css(styles.resultsContainer)}>
-      <NewSearch />
+      <Search />
       <SearchOptions />
       <Grid spots={spotsDataTest}/>
     </div>
   );
 };
 
-export default Results;
+export default Seeker;
