@@ -13,7 +13,7 @@ const Results = () => {
 
   useEffect(()=>{
     console.log(sessionStorage.get());
-  },[]);
+  },[sessionStorage]);
   const spotsDataTest: Spot[]  = [{
     id: 1,
     name: "Punto Verde Plaza Rosario Vera Peñaloza",

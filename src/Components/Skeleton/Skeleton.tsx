@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import { SessionStorageContext } from "../../Context/SessionStorage.context";
+import GoUpButton from "../GoUpButton";
 
 const Skeleton = () => {
   const geoLocality = useContext(GeoLocalityContext);
@@ -15,6 +16,7 @@ const Skeleton = () => {
           <TopBar />
           <Outlet />
           <Footer />
+          <GoUpButton />
         </SessionStorageContext.Provider>
       </GeoLocalityContext.Provider>
     </>
