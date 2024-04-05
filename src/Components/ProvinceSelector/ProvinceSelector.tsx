@@ -10,7 +10,6 @@ interface ProvinceSelectorProps {
 const ProvinceSelector = (props: ProvinceSelectorProps) => {
   return (
     <>
-      <label className={css(styles.label)}></label>
       <select
         className={css(styles.newSearchDropdown)}
         onChange={(e) => props.selectProvince(e.target.value)}
