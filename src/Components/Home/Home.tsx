@@ -1,6 +1,7 @@
 import { css } from "aphrodite";
 import styles from "./styles";
 import HomeSearchBox from "../HomeSearchBox";
+import ColaboraConNos from "../ColaboraConNos";
 
 const Body = () => {
   return (
@@ -15,6 +16,7 @@ const Body = () => {
           su ubicacion y el tipo de material que reciben para el reciclaje.
         </p>
         <HomeSearchBox />
+        <ColaboraConNos />
       </div>
     </>
   );
