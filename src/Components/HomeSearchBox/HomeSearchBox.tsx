@@ -63,33 +63,31 @@ const HomeSearchBox = () => {
   }, [geoLocality, provinceSelected]);
 
   return (
-    <article>
+    <div>
       <div>
-        <div>
-          <form className={css(styles.formContainer)}>
-            {provinceError ? (
-              <p>Ocurrio un error</p>
-            ) : (
-              <ProvinceSelector
-                provinceNames={provinces}
-                selectProvince={selectProvince}
-              />
-            )}
-            {localitiesError ? (
-              <p>Ocurrio un error</p>
-            ) : (
-              <LocalitySelector
-                localitiesNames={localities}
-                selectLocality={selectLocality}
-              />
-            )}
-            <div>
-              <BtnSearch onSearch={saveData} />
-            </div>
-          </form>
-        </div>
+        <form className={css(styles.formContainer)}>
+          {provinceError ? (
+            <p>Ocurrio un error</p>
+          ) : (
+            <ProvinceSelector
+              provinceNames={provinces}
+              selectProvince={selectProvince}
+            />
+          )}
+          {localitiesError ? (
+            <p>Ocurrio un error</p>
+          ) : (
+            <LocalitySelector
+              localitiesNames={localities}
+              selectLocality={selectLocality}
+            />
+          )}
+          <div>
+            <BtnSearch onSearch={saveData} />
+          </div>
+        </form>
       </div>
-    </article>
+    </div>
   );
 };
 
