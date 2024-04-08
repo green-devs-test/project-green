@@ -5,25 +5,26 @@ import { faCamera } from "@fortawesome/free-solid-svg-icons";
 
 const Colaborate = () => {
   return (
-   <div className={css(styles.colaborateCard)}>
-    <div className={css(styles.colaborateContainer)}> 
+    <div className={css(styles.colaborateCard)}>
+      <div className={css(styles.colaborateContainer)}>
         <div className={css(styles.colaborateInfo)}>
-            <p className={css(styles.colaborateTitle)}>Colabora con nosotros</p>
-            <p className={css(styles.colaborateParagraph)}>Este es un placeholder hasta que tengamos el texto de la sección “Colabora con Nosotros"</p>
+          <p className={css(styles.colaborateTitle)}>Colabora con nosotros</p>
+          <p className={css(styles.colaborateParagraph)}>
+            Este es un placeholder hasta que tengamos el texto de la sección
+            “Colabora con Nosotros"
+          </p>
         </div>
         <div className={css(styles.colaboratePhoto)}>
-            <FontAwesomeIcon
-                icon={faCamera}
-                className={css(styles.icon)}
-            />
+          <FontAwesomeIcon icon={faCamera} className={css(styles.icon)} />
         </div>
-    </div>
-        <div className={css(styles.containerBtn)}>
-            <button className={css(styles.btnColaborate)} type="button">Conoce más</button>
-        </div>
+      </div>
+      <div className={css(styles.containerBtn)}>
+        <button className={css(styles.btnColaborate)} type="button">
+          Conoce más
+        </button>
+      </div>
     </div>
   );
-
-  };
+};
 
 export default Colaborate;
