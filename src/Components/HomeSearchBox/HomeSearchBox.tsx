@@ -48,7 +48,7 @@ const HomeSearchBox = () => {
   }, [geoLocality]);
 
   useEffect( () => {
-    const getSpots = async () => {
+    const getLocalities = async () => {
       if(!provinceSelected) return;
       try {
         const response = await geoLocality.getLocalities(provinceSelected);
@@ -59,7 +59,7 @@ const HomeSearchBox = () => {
         setLocalitiesError(true);
       }
     };
-    getSpots();
+    getLocalities();
   }, [geoLocality, provinceSelected])
 
 

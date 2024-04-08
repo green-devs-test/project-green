@@ -26,7 +26,7 @@ const Card = (props: CardProps) => {
                 ))}
               </div>
               <div className={css(styles.buttonsContainer)}>
-                <button className={css(styles.cardButton)}>
+                <button className={css(styles.cardButton)} type="button">
                   Telefono{" "}
                   
                   <FontAwesomeIcon
@@ -36,7 +36,7 @@ const Card = (props: CardProps) => {
                 </button>
                 {props.spot.link && (
                   <a href={props.spot.link} className={css(styles.cardButton)} target="_blank" rel="noreferrer" >
-                    <button className={css(styles.cardButton)}>
+                    <button className={css(styles.cardButton)} type="button">
                       Ver Ubicación{" "}
                       <FontAwesomeIcon
                         icon={faLocationDot}
