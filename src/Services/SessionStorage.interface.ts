@@ -1,4 +1,4 @@
 export interface SessionStorageInterface {
-    province: string,
-    locality: string
+  province: string;
+  locality: string;
 }

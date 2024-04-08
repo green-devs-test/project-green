@@ -10,11 +10,17 @@ interface LocalitySelectorProps {
 const LocalitySelector = (props: LocalitySelectorProps) => {
   return (
     <>
-      <select className={css(styles.newSearchDropdown)} onChange={(e) => props.selectLocality(e.target.value)} 
-      {...(props.localitySelected && { value: props.localitySelected })}
+      <select
+        className={css(styles.newSearchDropdown)}
+        onChange={(e) => props.selectLocality(e.target.value)}
+        {...(props.localitySelected && { value: props.localitySelected })}
       >
         {props.localitiesNames.map((locality, index) => (
-          <option key={index} className={css(styles.options)} value={locality.name}>
+          <option
+            key={index}
+            className={css(styles.options)}
+            value={locality.name}
+          >
             {" "}
             {locality.name}{" "}
           </option>

@@ -22,20 +22,29 @@ const Card = (props: CardProps) => {
             <div className={css(styles.cardAdress)}>
               <div className={css(styles.CardMaterialsContainer)}>
                 {props.spot.materials.map((material) => (
-                  <p className={css(styles.CardMaterials)} key={props.spot.id+material} >{material}</p>
+                  <p
+                    className={css(styles.CardMaterials)}
+                    key={props.spot.id + material}
+                  >
+                    {material}
+                  </p>
                 ))}
               </div>
               <div className={css(styles.buttonsContainer)}>
                 <button className={css(styles.cardButton)} type="button">
                   Telefono{" "}
-                  
                   <FontAwesomeIcon
                     icon={faPhone}
                     className={css(styles.icon)}
                   />
                 </button>
                 {props.spot.link && (
-                  <a href={props.spot.link} className={css(styles.cardButton)} target="_blank" rel="noreferrer" >
+                  <a
+                    href={props.spot.link}
+                    className={css(styles.cardButton)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <button className={css(styles.cardButton)} type="button">
                       Ver Ubicación{" "}
                       <FontAwesomeIcon

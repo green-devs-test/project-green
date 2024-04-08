@@ -10,7 +10,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { SessionStorageContext } from "../../Context/SessionStorage.context";
 
 interface SearchProps {
-  searchSpots(province: string, locality: string): void
+  searchSpots(province: string, locality: string): void;
 }
 
 const Search = (props: SearchProps) => {
@@ -34,8 +34,7 @@ const Search = (props: SearchProps) => {
 
   const search = () => {
     props.searchSpots(provinceSelected, localitySelected);
-  }
-
+  };
 
   useEffect(() => {
     const getProvinces = async () => {
@@ -43,8 +42,14 @@ const Search = (props: SearchProps) => {
         const storageObject = sessionStorage.get();
         const response = await geoLocality.getProvinces();
         setProvinces(response);
-        const provinceSelected = response.find(province => province.name === storageObject.province)?.name;
-        setProvinceSelected(storageObject.province && provinceSelected? provinceSelected  : response[0].name);
+        const provinceSelected = response.find(
+          (province) => province.name === storageObject.province,
+        )?.name;
+        setProvinceSelected(
+          storageObject.province && provinceSelected
+            ? provinceSelected
+            : response[0].name,
+        );
       } catch (error) {
         console.error("Ocurrio un error");
         setProvinceError(true);
@@ -61,16 +66,22 @@ const Search = (props: SearchProps) => {
         const response = await geoLocality.getLocalities(provinceSelected);
 
         setLocalities(response);
-        const localitySelected = response.find(locality => locality.name === storageObject.locality)?.name;
-        setLocalitySelected(storageObject.locality && localitySelected? localitySelected : response[0].name);
-        localitySelected && props.searchSpots(provinceSelected, localitySelected);
+        const localitySelected = response.find(
+          (locality) => locality.name === storageObject.locality,
+        )?.name;
+        setLocalitySelected(
+          storageObject.locality && localitySelected
+            ? localitySelected
+            : response[0].name,
+        );
+        localitySelected &&
+          props.searchSpots(provinceSelected, localitySelected);
       } catch (error) {
         console.error("Ocurrio un error");
         setLocalitiesError(true);
       }
     };
     getLocalities();
-    
   }, [geoLocality, provinceSelected]);
 
   return (
@@ -94,7 +105,11 @@ const Search = (props: SearchProps) => {
             localitySelected={localitySelected}
           />
         )}
-        <button className={css(styles.SearchButton)} onClick={search} type="button">
+        <button
+          className={css(styles.SearchButton)}
+          onClick={search}
+          type="button"
+        >
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             className={css(styles.icon)}

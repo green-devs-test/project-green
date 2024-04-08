@@ -24,7 +24,7 @@ const HomeSearchBox = () => {
   const [localitySelected, setLocalitySelected] = useState("");
 
   const selectProvince = (province: string) => {
-    setProvinceSelected(province)
+    setProvinceSelected(province);
   };
   const selectLocality = (locality: string) => {
     setLocalitySelected(locality);
@@ -32,13 +32,13 @@ const HomeSearchBox = () => {
   const saveData = () => {
     sessionStorage.save(provinceSelected, localitySelected);
     navigate("/buscador");
-  }
+  };
   useEffect(() => {
     const getProvinces = async () => {
       try {
         const response = await geoLocality.getProvinces();
         setProvinces(response);
-        setProvinceSelected(response[0].name)
+        setProvinceSelected(response[0].name);
       } catch (error) {
         console.error("Ocurrio un error");
         setProvinceError(true);
@@ -47,21 +47,20 @@ const HomeSearchBox = () => {
     getProvinces();
   }, [geoLocality]);
 
-  useEffect( () => {
+  useEffect(() => {
     const getLocalities = async () => {
-      if(!provinceSelected) return;
+      if (!provinceSelected) return;
       try {
         const response = await geoLocality.getLocalities(provinceSelected);
         setLocalities(response);
-        setLocalitySelected(response[0].name)
+        setLocalitySelected(response[0].name);
       } catch (error) {
         console.error("Ocurrio un error");
         setLocalitiesError(true);
       }
     };
     getLocalities();
-  }, [geoLocality, provinceSelected])
-
+  }, [geoLocality, provinceSelected]);
 
   return (
     <article>
@@ -76,12 +75,14 @@ const HomeSearchBox = () => {
                 selectProvince={selectProvince}
               />
             )}
-            {localitiesError ?
+            {localitiesError ? (
               <p>Ocurrio un error</p>
-            : <LocalitySelector
-              localitiesNames={localities}
-              selectLocality={selectLocality}
-            />}
+            ) : (
+              <LocalitySelector
+                localitiesNames={localities}
+                selectLocality={selectLocality}
+              />
+            )}
             <div>
               <BtnSearch onSearch={saveData} />
             </div>

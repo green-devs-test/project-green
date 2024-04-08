@@ -1,7 +1,6 @@
 import { Locality, Province, Spot } from "./GeoLocality.interfaces";
 
 export const geoLocalityService = () => {
-
   const getProvinces = (): Promise<Province[]> => {
     return fetch(process.env.REACT_APP_API_URL + "/provinces/", {
       method: "GET",
@@ -48,10 +47,7 @@ export const geoLocalityService = () => {
       });
   };
 
-  const getSpots = (
-    province: string,
-    location: string,
-  ): Promise<Spot[]> => {
+  const getSpots = (province: string, location: string): Promise<Spot[]> => {
     return fetch(
       `${process.env.REACT_APP_API_URL}/provinces/${province}/${location}`,
       {

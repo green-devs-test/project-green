@@ -14,7 +14,7 @@ export interface Spot {
 }
 
 export interface Locality {
-  id: number,
-  name: string,
-  spots: Spot[] | []
+  id: number;
+  name: string;
+  spots: Spot[] | [];
 }

@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     maxWidth: 900,
     height: "auto",
     padding: 7,
-    margin: 'auto',
+    margin: "auto",
     marginTop: 25,
     boxSizing: "border-box",
     zIndex: 1,

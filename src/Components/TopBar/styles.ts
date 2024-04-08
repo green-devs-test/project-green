@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     verticalAlign: "text-bottom",
     height: "50px",
     width: "100%",
-    margin: 'auto',
+    margin: "auto",
     padding: "10px",
     boxSizing: "border-box",
     borderBottom: "2px solid black",
@@ -18,9 +18,7 @@ const styles = StyleSheet.create({
     top: "0",
     zIndex: 10,
   },
-  GoUpButtonAnchor: {
-    
-  },
+  GoUpButtonAnchor: {},
 });
 
 export default styles;
