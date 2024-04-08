@@ -22,10 +22,13 @@ const styles = StyleSheet.create({
   },
   h2: {
     color: '#000000',
-    fontSize: '16px',
+    fontSize: '1.5rem',
   },
   p: {
     color: '#000000',
+    fontSize: '1rem',
+    fontWeight: 400,
+    textAlign: 'left',
   },
   colaboraPhoto: {
     display: "flex",
@@ -35,9 +38,10 @@ const styles = StyleSheet.create({
     padding: '5px',
   },
   icon: {
-    fontSize: '7rem',
+    fontSize: '3rem',
     color: '#404040',
-  },
+    padding: '0px 30px',
+    },
   containerBtn: {
     display: 'flex',
     justifyContent: 'center',
@@ -45,6 +49,7 @@ const styles = StyleSheet.create({
   btnColaboraConNos: {
     backgroundColor: "#fff",
     color: "#398532",
+    width: '90%',
     textDecoration: "none",
     padding: "10px 10px",
     marginBottom: "20px",
