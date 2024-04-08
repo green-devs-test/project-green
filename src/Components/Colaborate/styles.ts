@@ -1,12 +1,12 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  colaboraCard: {
+  colaborateCard: {
     backgroundColor: '#DDF5DB',
     borderRadius: '10px',
     margin: '15px',
   },
-  colaboraContainer: {
+  colaborateContainer: {
     backgroundColor: '#DDF5DB',
     display: 'flex',
     flexDirection: 'row',
@@ -15,22 +15,22 @@ const styles = StyleSheet.create({
     marginBottom: '0px',
     
   },
-  colaboraInfo: {
+  colaborateInfo: {
     display: 'flex',
     flexDirection: 'column',
     padding: '5px',
   },
-  h2: {
+  colaborateTitle: {
     color: '#000000',
     fontSize: '1.5rem',
   },
-  p: {
+  colaborateParagraph : {
     color: '#000000',
     fontSize: '1rem',
     fontWeight: 400,
     textAlign: 'left',
   },
-  colaboraPhoto: {
+  colaboratePhoto: {
     display: "flex",
     justifyContent: 'center',
     alignContent: 'center',
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
   },
-  btnColaboraConNos: {
+  btnColaborate: {
     backgroundColor: "#fff",
     color: "#398532",
     width: '90%',
