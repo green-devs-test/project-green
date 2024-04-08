@@ -4,7 +4,7 @@ export interface Province {
   locations: string[];
 }
 
-export interface Spots {
+export interface Spot {
   id: number;
   name: string;
   address: string;
@@ -14,7 +14,7 @@ export interface Spots {
 }
 
 export interface Locality {
-  id: number,
-  name: string,
-  spots: Spots[] | []
+  id: number;
+  name: string;
+  spots: Spot[] | [];
 }

@@ -1,48 +1,32 @@
-import { Spots } from "../../Services/interfaces";
+import { useContext, useState } from "react";
+import { Spot } from "../../Services/GeoLocality.interfaces";
 import Grid from "../Grid";
 import Search from "../Search";
 import SearchOptions from "../SearchOptions";
 import styles from "./styles";
 import { css } from "aphrodite";
+import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 
 const Seeker = () => {
+  const geoLocality = useContext(GeoLocalityContext);
+  const [spots, setSpots] = useState<Spot[] | null>(null);
 
-  const spotsDataTest: Spots[]  = [{
-    id: 1,
-    name: "Punto Verde Plaza Rosario Vera Peñaloza",
-    address: "Av. San Juan y Chacabuco",
-    link: "https://maps.app.goo.gl/Tffg5QyDLWhpYwT19",
-    telephone: null,
-    materials: ["Papeles",
-    "Cartones",
-    "Plásticos",
-    "Latas",
-    "Aceite Usado",
-    "Cápsulas de Cafe",
-    "Pilas",
-    "Organicos"]
-  },
-  {
-    id: 2,
-    name: "Punto Verde Plaza San Martin",
-    address: "Av. Libertador y Maipu",
-    link: "https://maps.app.goo.gl/AbCdEfGhIjKlMnOp2",
-    telephone: null,
-    materials: ["Vidrios",
-    "Metales",
-    "Electrónicos",
-    "Baterías",
-    "Neumáticos",
-    "Textiles",
-    "Maderas",
-    "Inorgánicos"]
-}];
+  const seekSpots = (province: string, locality: string) => {
+    if (province === "" || locality === "") return;
+    try {
+      geoLocality
+        .getSpots(province, locality)
+        .then((response) => setSpots(response));
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className={css(styles.resultsContainer)}>
-      <Search />
-      <SearchOptions />
-      <Grid spots={spotsDataTest}/>
+      <Search searchSpots={seekSpots} />
+      <SearchOptions results={spots?.length || 0} />
+      <Grid spots={spots} />
     </div>
   );
 };
