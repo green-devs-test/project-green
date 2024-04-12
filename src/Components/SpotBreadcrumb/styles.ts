@@ -1,7 +1,7 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  test: {
+  SpotBreadcrumbContainer: {
     color: 'black',
   },
 });
