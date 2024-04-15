@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About";
 import ErrorPage from "./Components/ErrorPage";
 import Seeker from "./Components/Seeker";
+import Colaborate from "./Components/Colaborate";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: "buscador",
         element: <Seeker />,
       },
+      {
+        path: "colaborate",
+        element: <Colaborate />
+      }
     ],
   },
 ]);

@@ -1,64 +1,29 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  colaborateCard: {
-    backgroundColor: "#DDF5DB",
-    borderRadius: "10px",
-    margin: "15px",
-  },
   colaborateContainer: {
-    backgroundColor: "#DDF5DB",
-    display: "flex",
-    flexDirection: "row",
-    borderRadius: "18px",
-    padding: "20px",
-    marginBottom: "0px",
+    marginTop: '40px',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
   },
-  colaborateInfo: {
-    display: "flex",
-    flexDirection: "column",
-    padding: "5px",
+  titlePage: {
+      marginLeft: '20px',
   },
-  colaborateTitle: {
-    color: "#000000",
-    fontSize: "1.5rem",
+  WriteUsMsj: {
+    textAlign: 'start',
+    margin: '20px 0px',
+    marginLeft: '20px',
   },
-  colaborateParagraph: {
-    color: "#000000",
-    fontSize: "1rem",
+  colaborateCall: {
     fontWeight: 400,
-    textAlign: "left",
+    fontSize: '1rem',
+    lineHeight: '1.1px',
   },
-  colaboratePhoto: {
-    display: "flex",
-    justifyContent: "center",
-    alignContent: "center",
-    margin: "auto",
-    padding: "5px",
-  },
-  icon: {
-    fontSize: "3rem",
-    color: "#404040",
-    padding: "0px 30px",
-  },
-  containerBtn: {
-    display: "flex",
-    justifyContent: "center",
-  },
-  btnColaborate: {
-    backgroundColor: "#fff",
-    color: "#398532",
-    width: "90%",
-    textDecoration: "none",
-    padding: "10px 10px",
-    marginBottom: "20px",
-    border: "solid 1px #398532",
-    fontSize: "1rem",
-    borderRadius: "8px",
-    transition: "all 400ms ease",
-    ":active": {
-      background: "#5a965a",
-    },
+  link: {
+    textDecoration: '',
+    color: 'black',
+    fontWeight: 700,
   },
 });
 

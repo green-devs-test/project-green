@@ -1,7 +1,7 @@
 import { css } from "aphrodite";
 import styles from "./styles";
 import HomeSearchBox from "../HomeSearchBox";
-import Colaborate from "../Colaborate";
+import ColaborateBox from "../ColaborateBox";
 import WelcomeHome from "../WelcomeHome";
 
 const Body = () => {
@@ -9,7 +9,7 @@ const Body = () => {
     <>
       <div className={css(styles.bodyContainer)}>
         <WelcomeHome />
-        <Colaborate />
+        <ColaborateBox />
       </div>
     </>
   );
