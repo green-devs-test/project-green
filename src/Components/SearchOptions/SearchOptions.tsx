@@ -1,7 +1,5 @@
 import styles from "./styles";
 import { css } from "aphrodite";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSliders } from "@fortawesome/free-solid-svg-icons";
 import SpotBreadcrumb from "../SpotBreadcrumb";
 
 interface SearchOptionsProps {

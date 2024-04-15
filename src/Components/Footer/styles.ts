@@ -1,18 +1,34 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  footer: {
-    backgroundColor: "#e3e3e3",
-    padding: 7,
-    textAlign: "center",
-    fontSize: 12,
+  footerContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: "#DFDFDF",
+    padding: 20,
     zIndex: 1,
     position: "relative",
     bottom: 0,
   },
   footerLink: {
-    textDecoration: "underline overline dotted #fff",
-    color: "#fff",
+    fontWeight: 400,
+    fontSize: '0.8rem',
+    lineHeight: '20px',
+    textDecoration: 'none',
+    color: '#000000',
+  },
+  footerLogo: {
+    fontWeight: 700,
+    lineHeight: '19.5px',
+    fontSize: '1rem',
+  },
+  footerMail: {
+    fontWeight: 400,
+    fontSize: '0.8rem',
+    lineHeight: '20px',
+    textDecoration: 'none',
+    color: '#000000',
+    margin: '0',
   },
 });
 

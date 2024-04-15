@@ -3,15 +3,10 @@ import styles from "./styles";
 
 const Footer = () => {
   return (
-    <div id="itemFooter" className={css(styles.footer)}>
-      ProjectGreen - Copywright© 2024 - Powered by
-      <a
-        className={css(styles.footerLink)}
-        href="https://github.com/green-devs-test"
-      >
-        {" "}
-        Green Dev tests
-      </a>
+    <div id="itemFooter" className={css(styles.footerContainer)}>
+      <a className={css(styles.footerLink, styles.footerLogo)} href="/"> {" "}LOGO</a>
+      <a className={css(styles.footerLink)} href="/about"> {" "}Sobre Nosotros</a>
+      <p className={css(styles.footerMail)}>Contactanos: mail@dominio.com.ar</p>
     </div>
   );
 };
