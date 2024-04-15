@@ -4,15 +4,11 @@ import HomeSearchBox from "../HomeSearchBox";
 import Colaborate from "../Colaborate";
 import WelcomeHome from "../WelcomeHome";
 
-const Body = () => {
+const ColaborateBox = () => {
   return (
     <>
-      <div className={css(styles.bodyContainer)}>
-        <WelcomeHome />
-        <ColaborateBox />
-      </div>
     </>
   );
 };
 
-export default Body;
+export default ColaborateBox;
