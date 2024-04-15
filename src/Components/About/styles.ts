@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
         marginLeft: '20px',
     },
     link: {
-        textDecoration: '',
         color: 'black',
         fontWeight: 700,
 
