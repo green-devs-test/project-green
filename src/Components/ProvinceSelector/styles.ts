@@ -2,16 +2,20 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
   newSearchDropdown: {
-    borderRadius: "12px",
-    margin: "5px",
-    padding: "3px 5px",
-    width: "100%",
+    fontWeight: 700,
+    lineHeight: '20px',
+    borderRadius: "8px",
+    margin: "10px",
+    padding: "15px",
+    minWidth: "95%",
   },
   select: {
-    borderRadius: "5px",
+    borderRadius: "8px",
     textAlign: "center",
   },
-  options: {},
+  options: {
+    borderRadius: "8px",
+  },
 });
 
 export default styles;

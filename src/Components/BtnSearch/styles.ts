@@ -2,16 +2,19 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
   btnSearch: {
-    backgroundColor: "#84b884",
-    fontSize: "x-large",
-    padding: "0.5rem",
-    borderRadius: "5px",
-    boxShadow: "none",
-    border: "1 px solid black",
+    backgroundColor: "#398532",
+    width: '195%', // Check this
+    boxShadow: 'none', // Check this
+    fontWeight: 700,
+    lineHeight: '20px',
+    fontSize: "1rem",
+    margin: "0px",
+    padding: "15px",
+    borderRadius: "8px",
     color: "#fff",
     transition: "all 400ms ease",
     ":active": {
-      background: "#5a965a",
+      background: "#84b884", 
     },
   },
 });
