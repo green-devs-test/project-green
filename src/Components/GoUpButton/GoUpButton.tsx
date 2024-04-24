@@ -8,7 +8,6 @@ const GoUpButton = () => {
     <a href="#top">
       <div className={css(styles.goUpButton)}>
           <FontAwesomeIcon icon={faArrowUp} className={css(styles.icon)} /> 
-         {/* <p className={css(styles.upArrow)}>↑</p>*/}
       </div>
     </a>
   );
