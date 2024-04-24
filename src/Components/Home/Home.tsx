@@ -1,6 +1,5 @@
 import { css } from "aphrodite";
 import styles from "./styles";
-import HomeSearchBox from "../HomeSearchBox";
 import ColaborateBox from "../ColaborateBox";
 import WelcomeHome from "../WelcomeHome";
 

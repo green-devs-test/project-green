@@ -1,7 +1,7 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  resultsContainer: {
+  seekerContainer: {
     maxWidth: 900,
     margin: "auto",
     height: "100%",

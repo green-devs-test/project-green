@@ -23,7 +23,7 @@ const Seeker = () => {
   };
 
   return (
-    <div className={css(styles.resultsContainer)}>
+    <div className={css(styles.seekerContainer)}>
       <Search searchSpots={seekSpots} />
       <SearchOptions results={spots?.length || 0} />
       <Grid spots={spots} />

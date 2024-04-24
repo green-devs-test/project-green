@@ -4,18 +4,19 @@ const styles = StyleSheet.create({
   containerCards: {
     width: "100%",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
   },
 
   card: {
+    
     position: "relative",
     width: "100%",
     minWidth: "150px",
     margin: "5px",
-    borderTop: "1px solid black",
+    borderTop: "1px solid #DFDFDF",
     overflow: "hidden",
     cursor: "default",
     padding: "3px",

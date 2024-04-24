@@ -2,9 +2,12 @@ import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
   SearchContainer: {
+    width: '98%',
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "center",
+    alignItems: 'center',
+    margin: 'auto',
     marginTop: 50,
   },
   SearchDropdown: {
@@ -31,10 +34,10 @@ const styles = StyleSheet.create({
   SearchButton: {
     backgroundColor: "#84b884",
     textDecoration: "none",
-    padding: "7px",
+    padding: "10px",
     margin: "3px 5px",
     color: "#fff",
-    border: "1px solid black",
+    border: "0px",
     fontSize: "1rem",
     borderRadius: "50px",
     transition: "all 400ms ease",
