@@ -1,13 +1,12 @@
 import { StyleSheet } from "aphrodite";
 
 const styles = StyleSheet.create({
-  colaborateCard: {
-    backgroundColor: "#DDF5DB",
-    borderRadius: "10px",
-    margin: "15px",
-  },
   colaborateContainer: {
     backgroundColor: "#DDF5DB",
+    borderRadius: "10px",
+    margin: "40px 20px",
+  },
+  colaborateCard: {
     display: "flex",
     flexDirection: "row",
     borderRadius: "18px",
@@ -56,6 +55,8 @@ const styles = StyleSheet.create({
     marginBottom: "20px",
     border: "solid 1px #398532",
     fontSize: "1rem",
+    lineHeight: "32px",
+    fontWeight: 700,
     borderRadius: "8px",
     transition: "all 400ms ease",
     ":active": {

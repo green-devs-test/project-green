@@ -5,8 +5,8 @@ import { faCamera } from "@fortawesome/free-solid-svg-icons";
 
 const ColaborateBox = () => {
   return (
-    <div className={css(styles.colaborateCard)}>
-      <div className={css(styles.colaborateContainer)}>
+    <div className={css(styles.colaborateContainer)}>
+      <div className={css(styles.colaborateCard)}>
         <div className={css(styles.colaborateInfo)}>
           <p className={css(styles.colaborateTitle)}>Colabora con nosotros</p>
           <p className={css(styles.colaborateParagraph)}>

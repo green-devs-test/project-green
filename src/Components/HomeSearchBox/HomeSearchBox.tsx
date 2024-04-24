@@ -82,9 +82,7 @@ const HomeSearchBox = () => {
               selectLocality={selectLocality}
             />
           )}
-          <div>
             <BtnSearch onSearch={saveData} />
-          </div>
         </form>
       </div>
     </div>

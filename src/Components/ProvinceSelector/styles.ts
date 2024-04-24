@@ -12,9 +12,13 @@ const styles = StyleSheet.create({
   select: {
     borderRadius: "8px",
     textAlign: "center",
+    padding: '10px',
   },
   options: {
-    borderRadius: "8px",
+    borderRadius: '8px',
+    color: 'green',
+    maxWidth: 100,
+    padding: '10px',
   },
 });
 
