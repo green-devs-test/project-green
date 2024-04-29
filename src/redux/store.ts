@@ -5,7 +5,6 @@ export const store = configureStore({
     reducer: {
         fields: fieldsReducer,
     },
-    // Add any middleware or enhancers here
 });
 
 export type RootState = ReturnType<typeof store.getState>;

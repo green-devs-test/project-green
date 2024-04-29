@@ -2,7 +2,6 @@ import { useAppSelector } from "../../redux/hooks";
 import styles from "./styles";
 import { css } from "aphrodite";
 
-// TODO: add the functionality with props
 
 const SpotBreadcrumb = () => {
   
