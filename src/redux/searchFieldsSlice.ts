@@ -7,8 +7,8 @@ export interface SearchFieldsState {
 }
 
 const initialState: SearchFieldsState = {
-    province: "Mendoza",
-    locality: "Capital",
+    province: "",
+    locality: "",
 };
 
 export const searchFieldsSlice = createSlice({
