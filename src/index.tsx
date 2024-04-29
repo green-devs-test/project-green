@@ -8,6 +8,8 @@ import About from "./Components/About";
 import ErrorPage from "./Components/ErrorPage";
 import Seeker from "./Components/Seeker";
 import Colaborate from "./Components/Colaborate";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +42,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 );
 
