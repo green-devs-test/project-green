@@ -7,7 +7,7 @@ import { Locality, Province } from "../../Services/GeoLocality.interfaces";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { SessionStorageContext } from "../../Context/SessionStorage.context";
+import { useAppSelector } from "../../redux/hooks";
 
 interface SearchProps {
   searchSpots(province: string, locality: string): void;
@@ -15,7 +15,7 @@ interface SearchProps {
 
 const Search = (props: SearchProps) => {
   const geoLocality = useContext(GeoLocalityContext);
-  const sessionStorage = useContext(SessionStorageContext);
+  const fields = useAppSelector((state) => state.fields);
 
   const [provinces, setProvinces] = useState<Province[]>([]);
   const [provinceError, setProvinceError] = useState(false);
@@ -39,14 +39,13 @@ const Search = (props: SearchProps) => {
   useEffect(() => {
     const getProvinces = async () => {
       try {
-        const storageObject = sessionStorage.get();
         const response = await geoLocality.getProvinces();
         setProvinces(response);
         const provinceSelected = response.find(
-          (province) => province.name === storageObject.province,
+          (province) => province.name === fields.province,
         )?.name;
         setProvinceSelected(
-          storageObject.province && provinceSelected
+          fields.province && provinceSelected
             ? provinceSelected
             : response[0].name,
         );
@@ -62,15 +61,14 @@ const Search = (props: SearchProps) => {
     const getLocalities = async () => {
       if (!provinceSelected) return;
       try {
-        const storageObject = sessionStorage.get();
         const response = await geoLocality.getLocalities(provinceSelected);
 
         setLocalities(response);
         const localitySelected = response.find(
-          (locality) => locality.name === storageObject.locality,
+          (locality) => locality.name === fields.locality,
         )?.name;
         setLocalitySelected(
-          storageObject.locality && localitySelected
+          fields.locality && localitySelected
             ? localitySelected
             : response[0].name,
         );

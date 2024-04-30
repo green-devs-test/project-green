@@ -6,12 +6,13 @@ import BtnSearch from "../BtnSearch";
 import { useContext, useEffect, useState } from "react";
 import { Locality, Province } from "../../Services/GeoLocality.interfaces";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
-import { SessionStorageContext } from "../../Context/SessionStorage.context";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../redux/hooks";
+import { setLocality, setProvince } from "../../redux/searchFieldsSlice";
 
 const HomeSearchBox = () => {
   const geoLocality = useContext(GeoLocalityContext);
-  const sessionStorage = useContext(SessionStorageContext);
+  const dispatch = useAppDispatch()
 
   const navigate = useNavigate();
 
@@ -30,7 +31,8 @@ const HomeSearchBox = () => {
     setLocalitySelected(locality);
   };
   const saveData = () => {
-    sessionStorage.save(provinceSelected, localitySelected);
+    dispatch(setProvince(provinceSelected))
+    dispatch(setLocality(localitySelected))
     navigate("/buscador");
   };
   useEffect(() => {

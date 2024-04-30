@@ -6,8 +6,11 @@ import SearchOptions from "../SearchOptions";
 import styles from "./styles";
 import { css } from "aphrodite";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
+import { useAppDispatch } from "../../redux/hooks";
+import { setLocality, setProvince } from "../../redux/searchFieldsSlice";
 
 const Seeker = () => {
+  const dispatch = useAppDispatch()
   const geoLocality = useContext(GeoLocalityContext);
   const [spots, setSpots] = useState<Spot[] | null>(null);
 
@@ -16,7 +19,11 @@ const Seeker = () => {
     try {
       geoLocality
         .getSpots(province, locality)
-        .then((response) => setSpots(response));
+        .then((response) => {
+          setSpots(response);
+          dispatch(setProvince(province))
+          dispatch(setLocality(locality))
+        });
     } catch (error) {
       console.error(error);
     }
