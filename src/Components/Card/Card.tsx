@@ -16,11 +16,10 @@ const Card = (props: CardProps) => {
         <div className={css(styles.card)}>
           <div className={css(styles.cardContent)}>
             <h3 className={css(styles.spotName)}>{props.spot.name}</h3>
-            <p>
-              <b>Direccion:</b> {props.spot.address}
-            </p>
             <div className={css(styles.cardAdress)}>
-              <div className={css(styles.CardMaterialsContainer)}>
+              <p className={css(styles.cardAdressContent)}>{props.spot.address}</p>
+            </div>
+            <div className={css(styles.CardMaterialsContainer)}>
                 {props.spot.materials.map((material) => (
                   <p
                     className={css(styles.CardMaterials)}
@@ -58,7 +57,6 @@ const Card = (props: CardProps) => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };
