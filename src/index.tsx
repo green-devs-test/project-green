@@ -3,11 +3,11 @@ import ReactDOM from "react-dom/client";
 import Skeleton from "./Components/Skeleton/Skeleton";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Components/Home/Home";
-import About from "./Components/About";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About";
 import ErrorPage from "./Components/ErrorPage";
-import Seeker from "./Components/Seeker";
-import Colaborate from "./Components/Colaborate";
+import Seeker from "./Pages/Seeker";
+import Colaborate from "./Pages/Colaborate";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
