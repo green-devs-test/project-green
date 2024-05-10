@@ -1,4 +1,4 @@
-import ColaborateCard from "../ColaborateCard";
+import ColaborateCard from "../../Components/ColaborateCard";
 import { css } from "aphrodite";
 import styles from "./styles";
 

@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { Spot } from "../../Services/GeoLocality.interfaces";
-import Grid from "../Grid";
-import Search from "../Search";
-import SearchOptions from "../SearchOptions";
+import Grid from "../../Components/Grid";
+import Search from "../../Components/Search";
+import SearchOptions from "../../Components/SearchOptions";
 import styles from "./styles";
 import { css } from "aphrodite";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
