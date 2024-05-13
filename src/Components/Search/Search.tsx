@@ -1,67 +1,37 @@
 import { css } from "aphrodite";
 import styles from "./styles";
-import ProvinceSelector from "../ProvinceSelector";
 import LocalitySelector from "../LocalitySelector";
 import { useContext, useEffect, useState } from "react";
-import { Locality, Province } from "../../Services/GeoLocality.interfaces";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useAppSelector } from "../../redux/hooks";
+import { Locality } from "../../Data/interfaces";
 
 interface SearchProps {
-  searchSpots(province: string, locality: string): void;
+  searchSpots(locality: string): void;
 }
 
 const Search = (props: SearchProps) => {
   const geoLocality = useContext(GeoLocalityContext);
   const fields = useAppSelector((state) => state.fields);
 
-  const [provinces, setProvinces] = useState<Province[]>([]);
-  const [provinceError, setProvinceError] = useState(false);
-  const [provinceSelected, setProvinceSelected] = useState("");
-
   const [localities, setLocalities] = useState<Locality[]>([]);
   const [localitiesError, setLocalitiesError] = useState(false);
   const [localitySelected, setLocalitySelected] = useState("");
 
-  const selectProvince = (province: string) => {
-    setProvinceSelected(province);
-  };
   const selectLocality = (locality: string) => {
     setLocalitySelected(locality);
   };
 
   const search = () => {
-    props.searchSpots(provinceSelected, localitySelected);
+    props.searchSpots(localitySelected);
   };
 
   useEffect(() => {
-    const getProvinces = async () => {
+    const getLocalities = () => {
       try {
-        const response = await geoLocality.getProvinces();
-        setProvinces(response);
-        const provinceSelected = response.find(
-          (province) => province.name === fields.province,
-        )?.name;
-        setProvinceSelected(
-          fields.province && provinceSelected
-            ? provinceSelected
-            : response[0].name,
-        );
-      } catch (error) {
-        console.error("Ocurrio un error");
-        setProvinceError(true);
-      }
-    };
-    getProvinces();
-  }, [geoLocality, sessionStorage]);
-
-  useEffect(() => {
-    const getLocalities = async () => {
-      if (!provinceSelected) return;
-      try {
-        const response = await geoLocality.getLocalities(provinceSelected);
+        const response = geoLocality.getLocalities();
 
         setLocalities(response);
         const localitySelected = response.find(
@@ -73,27 +43,18 @@ const Search = (props: SearchProps) => {
             : response[0].name,
         );
         localitySelected &&
-          props.searchSpots(provinceSelected, localitySelected);
+          props.searchSpots(localitySelected);
       } catch (error) {
         console.error("Ocurrio un error");
         setLocalitiesError(true);
       }
     };
     getLocalities();
-  }, [geoLocality, provinceSelected]);
+  }, [geoLocality, fields.locality, props]);
 
   return (
     <>
       <form className={css(styles.SearchContainer)}>
-        {provinceError ? (
-          <p>Ocurrio un error</p>
-        ) : (
-          <ProvinceSelector
-            provinceNames={provinces}
-            selectProvince={selectProvince}
-            provinceSelected={provinceSelected}
-          />
-        )}
         {localitiesError ? (
           <p>Ocurrio un error</p>
         ) : (

@@ -1,5 +1,3 @@
-import { css } from "aphrodite";
-import styles from "./styles";
 
 const About = () => {
   return (
