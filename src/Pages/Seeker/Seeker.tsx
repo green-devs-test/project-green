@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import { Spot } from "../../Services/GeoLocality.interfaces";
 import Grid from "../../Components/Grid";
 import Search from "../../Components/Search";
 import SearchOptions from "../../Components/SearchOptions";
@@ -7,26 +6,19 @@ import styles from "./styles";
 import { css } from "aphrodite";
 import { GeoLocalityContext } from "../../Context/GeoLocality.context";
 import { useAppDispatch } from "../../redux/hooks";
-import { setLocality, setProvince } from "../../redux/searchFieldsSlice";
+import { setLocality } from "../../redux/searchFieldsSlice";
+import { Spot } from "../../Data/interfaces";
 
 const Seeker = () => {
   const dispatch = useAppDispatch()
   const geoLocality = useContext(GeoLocalityContext);
   const [spots, setSpots] = useState<Spot[] | null>(null);
 
-  const seekSpots = (province: string, locality: string) => {
-    if (province === "" || locality === "") return;
-    try {
-      geoLocality
-        .getSpots(province, locality)
-        .then((response) => {
-          setSpots(response);
-          dispatch(setProvince(province))
-          dispatch(setLocality(locality))
-        });
-    } catch (error) {
-      console.error(error);
-    }
+  const seekSpots = (locality: string) => {
+    if (locality === "") return;
+      const response = geoLocality.getSpots(locality);
+      setSpots(response);
+      dispatch(setLocality(locality));
   };
 
   return (

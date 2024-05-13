@@ -1,7 +1,7 @@
 import { css } from "aphrodite";
-import { Spot } from "../../Services/GeoLocality.interfaces";
 import Card from "../Card";
 import styles from "./styles";
+import { Spot } from "../../Data/interfaces";
 
 interface GridProps {
   spots: Spot[] | null;
