@@ -3,6 +3,7 @@ import styles from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Spot } from "../../Services/GeoLocality.interfaces";
+import Materials from "../Materials";
 
 interface CardProps {
   spot: Spot;
