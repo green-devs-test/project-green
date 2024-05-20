@@ -1,6 +1,6 @@
 import { css } from "aphrodite";
 import styles from "./styles";
-import { Locality } from "../../Services/GeoLocality.interfaces";
+import { Locality } from "../../Data/interfaces";
 
 interface LocalitySelectorProps {
   localitiesNames: Locality[];

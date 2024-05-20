@@ -8,7 +8,7 @@ const SpotBreadcrumb = () => {
   const fields = useAppSelector((state) => state.fields);
   return (
     <div className={css(styles.SpotBreadcrumbContainer)}>
-      <p>{fields.province} {">"} {fields.locality}</p>
+      <p>{fields.locality}</p>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { css } from "aphrodite";
 import styles from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { Spot } from "../../Services/GeoLocality.interfaces";
+import { Spot } from "../../Data/interfaces";
 import Materials from "../Materials";
 
 interface CardProps {
@@ -10,7 +10,6 @@ interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-  // TODO: implement the telephone button
   return (
     <>
       <div className={css(styles.containerCards)}>

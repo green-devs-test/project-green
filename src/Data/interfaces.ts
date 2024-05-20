@@ -1,10 +1,10 @@
-export interface Province {
+interface Province {
   id: number;
   name: string;
   locations: string[];
 }
 
-export interface Spot {
+interface Spot {
   id: number;
   name: string;
   address: string;
@@ -13,8 +13,10 @@ export interface Spot {
   materials: string[];
 }
 
-export interface Locality {
+interface Locality {
   id: number;
   name: string;
   spots: Spot[] | [];
 }
+
+export type { Province, Spot, Locality };
