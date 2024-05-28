@@ -18,11 +18,11 @@ const ColaborateBox = () => {
           <FontAwesomeIcon icon={faCamera} className={css(styles.icon)} />
         </div>
       </div>
-      <div className={css(styles.containerBtn)}>
-        <button className={css(styles.btnColaborate)} type="button">
-          Conoce más
-        </button>
-      </div>
+        <a className={css(styles.containerBtn)} href="/colaborate">
+          <button className={css(styles.btnColaborate)} type="button">
+            Conoce más
+          </button>
+        </a>
     </div>
   );
 };
