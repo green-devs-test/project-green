@@ -17,6 +17,7 @@ const Card = (props: CardProps) => {
             <h3 className={css(styles.spotName)}>{props.spot.name}</h3>
             <div className={css(styles.cardAdress)}>
               <p className={css(styles.cardAdressContent)}>{props.spot.address}</p>
+              <p className={css(styles.cardAdressContent)}>{props.spot.telephone}</p>
             </div>
             <div className={css(styles.CardMaterialsContainer)}>
                 {props.spot.materials.map((material) => (
