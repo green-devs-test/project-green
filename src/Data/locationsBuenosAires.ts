@@ -11,7 +11,7 @@ const locationsBuenosAires: Locality[] = [
         name: 'Punto Verde Plaza Rosario Vera Peñaloza',
         address: 'Av. San Juan y Chacabuco',
         link: 'https://maps.app.goo.gl/Tffg5QyDLWhpYwT19',
-        telephone: null,
+        telephone: '11-234-567-890',
         materials: [
           MATERIALS.PAPERS,
           MATERIALS.CARTONS,
@@ -74,7 +74,7 @@ const locationsBuenosAires: Locality[] = [
         name: 'Punto Verde Plaza Manzana 66',
         address: 'Moreno y Jujuy',
         link: 'https://maps.app.goo.gl/wBQa3dRi7mLQTQgr9',
-        telephone: null,
+        telephone: '11-234-567-890',
         materials: [
           MATERIALS.PAPERS,
           MATERIALS.CARTONS,
